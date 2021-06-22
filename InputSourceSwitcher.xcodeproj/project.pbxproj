@@ -14,7 +14,6 @@
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
 		48DA104C2681781700A3D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104B2681781700A3D537 /* Assets.xcassets */; };
 		48DA104F2681781700A3D537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104E2681781700A3D537 /* Preview Assets.xcassets */; };
-		48DA10582681785E00A3D537 /* Applescripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10572681785E00A3D537 /* Applescripts.swift */; };
 		48DA10602681B26E00A3D537 /* InputSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA105F2681B26E00A3D537 /* InputSources.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		48DA104E2681781700A3D537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48DA10502681781700A3D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputSourceSwitcher.entitlements; sourceTree = "<group>"; };
-		48DA10572681785E00A3D537 /* Applescripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applescripts.swift; sourceTree = "<group>"; };
 		48DA10592681925400A3D537 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48DA105A26819DAF00A3D537 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		48DA105F2681B26E00A3D537 /* InputSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSources.swift; sourceTree = "<group>"; };
@@ -52,14 +50,6 @@
 				48DA105A26819DAF00A3D537 /* TODO.md */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		48462E3426821892006DB779 /* Applesript */ = {
-			isa = PBXGroup;
-			children = (
-				48DA10572681785E00A3D537 /* Applescripts.swift */,
-			);
-			path = Applesript;
 			sourceTree = "<group>";
 		};
 		48462E352682193C006DB779 /* App */ = {
@@ -92,7 +82,6 @@
 			children = (
 				48462E352682193C006DB779 /* App */,
 				48DA10612681B27500A3D537 /* DataStructure */,
-				48462E3426821892006DB779 /* Applesript */,
 				48DA10642681B66100A3D537 /* ViewModel */,
 				48462E312681F9AD006DB779 /* Other */,
 				48DA10502681781700A3D537 /* Info.plist */,
@@ -204,7 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48DA10582681785E00A3D537 /* Applescripts.swift in Sources */,
 				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,

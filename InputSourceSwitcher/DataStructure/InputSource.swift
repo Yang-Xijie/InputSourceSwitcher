@@ -1,10 +1,3 @@
-//
-//  InputSource.swift
-//  InputSourceSwitcher
-//
-//  Created by 杨希杰 on 2021/6/22.
-//
-
 import Foundation
 
 struct InputSource: Identifiable {

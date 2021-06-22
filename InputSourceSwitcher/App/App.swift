@@ -15,7 +15,7 @@ struct InputSourceSwitcherApp: App {
             CommandGroup(replacing: .newItem) {} // New Window
 
             // customized items
-            CommandGroup(replacing: .pasteboard) {
+            CommandGroup(replacing: .pasteboard) { // Cut Copy Paste...
                 Button("Reset") {
                     print("[Menu Bar] Reset -> Reset")
                     MyInputSources.Reset()
@@ -23,7 +23,7 @@ struct InputSourceSwitcherApp: App {
                 .keyboardShortcut("r", modifiers: .command)
             }
 
-            CommandGroup(replacing: .appInfo) {
+            CommandGroup(replacing: .appInfo) { // About
                 Button("About") {
                     print("[Menu Bar] App -> About")
                 }
@@ -33,7 +33,7 @@ struct InputSourceSwitcherApp: App {
                 }
             }
 
-            CommandGroup(replacing: .help) {
+            CommandGroup(replacing: .help) { // Help
                 Button("Help") {
                     print("[Menu Bar] Help -> Help")
                 }

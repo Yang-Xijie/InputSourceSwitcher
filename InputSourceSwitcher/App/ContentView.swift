@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  InputSourceSwitcher
-//
-//  Created by 杨希杰 on 2021/6/22.
-//
-
 import KeyboardShortcuts
 import SwiftUI
 
@@ -14,11 +7,12 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            BottomOptionView(MyInputSources: MyInputSources)
+            Divider()
             HStack {
                 SwitchButtonView(MyInputSources: MyInputSources)
                 ShortcutsView(MyInputSources: MyInputSources)
             }
-            BottomOptionView(MyInputSources: MyInputSources)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -32,8 +26,7 @@ struct BottomOptionView: View {
         HStack {
             Button("Reset") {
                 print("[Button] Reset clicked")
-                MyInputSources.Reset()
-                
+                MyInputSources.Reset() // reset InputSources and KeyboardShortcuts
             }
             Button("Quit") {
                 print("[Button] Quit clicked")
@@ -51,7 +44,8 @@ struct SwitchButtonView: View {
             ForEach(MyInputSources.currentInputSources) { inputSource in
                 Button("Switch To \(inputSource.name)") {
                     print("[UI] Button Switch To \(inputSource.name) Clicked!")
-                    SwitchInputSource(to: inputSource.name)
+
+                    MyInputSources.SwitchInputSource(to: inputSource.name)
                 }
             }
         }
@@ -75,9 +69,7 @@ struct ShortcutsView: View {
                     .onAppear {
                         KeyboardShortcuts.onKeyDown(for: shortcut) {
                             print("[Shortcuts] shortcut of \(inputSource.name) down")
-                        }
-                        KeyboardShortcuts.onKeyUp(for: shortcut) {
-                            print("[Shortcuts] shortcut of \(inputSource.name) up")
+                            MyInputSources.SwitchInputSource(to: inputSource.name)
                         }
                     }
                 }
@@ -85,14 +77,3 @@ struct ShortcutsView: View {
         }
     }
 }
-
-// struct InputSourcesLabelView: View {
-//    @ObservedObject var MyInputSources: InputSourcesModel
-//    var body: some View {
-//        VStack {
-//            ForEach(MyInputSources.currentInputSources) { inputSource in
-//                Text(inputSource.name)
-//            }
-//        }
-//    }
-// }

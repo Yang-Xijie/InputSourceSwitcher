@@ -40,15 +40,11 @@ struct SourceSwitcherApp: App {
                 .keyboardShortcut("?", modifiers: .command)
             }
         }
-        
-        WindowGroup{ // other scene
-            Text("About").padding()
+
+        // Another window
+        WindowGroup("SourceSwitcherAbout") {
+            AboutView()
         }
-        .handlesExternalEvents(matching: Set(arrayLiteral: "*"))
-        
-        WindowGroup{ // other scene
-            Text("HAHA").padding()
-        }
-        .handlesExternalEvents(matching: Set(arrayLiteral: "*"))
+        .handlesExternalEvents(matching: Set(arrayLiteral: "SourceSwitcherAbout")) // String including part of `URL Schemes`
     }
 }

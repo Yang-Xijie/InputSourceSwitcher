@@ -25,7 +25,17 @@
 			<string>com.yangxijie.SourceSwitcher</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>SourceSwitcher</string>
+				<string>SourceSwitcherAbout</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>com.yangxijie.SourceSwitcher</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>SourceSwitcherHelp</string>
 			</array>
 		</dict>
 	</array>

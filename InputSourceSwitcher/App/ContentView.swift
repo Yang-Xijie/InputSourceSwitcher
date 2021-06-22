@@ -15,7 +15,7 @@ struct ContentView: View {
             }
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(idealWidth: 300,maxWidth: .infinity, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/ )
     }
 }
 
@@ -26,10 +26,11 @@ struct TopOptionView: View {
     var body: some View {
         HStack {
             Button("About") {
-                            if let url = URL(string: "SourceSwitcher://Viewer") {
-                                 openURL(url)
-                            }
-                        }
+                // `Target -> Info -> URL Types -> URL Schemes`://Viewer
+                if let url = URL(string: "SourceSwitcherAbout://Viewer") {
+                    openURL(url)
+                }
+            }
             Button("Reset") {
                 print("[Button] Reset clicked")
                 MyInputSources.Reset() // reset InputSources and KeyboardShortcuts

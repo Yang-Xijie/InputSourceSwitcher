@@ -25,10 +25,20 @@ struct ContentView: View {
 
             Spacer()
 
-            // get input sources from menu bar
-            Button("Reset") {
-                print("[User Action] Button Reset Clicked!")
-                currentInputSources = GetCurrentInputSourcesInMenubar()
+            HStack {
+                // get input sources from menu bar
+                Button("Reset") {
+                    print("[User Action] Button Reset Clicked!")
+                    currentInputSources = GetCurrentInputSourcesInMenubar()
+                }
+
+                Spacer()
+
+                Button("Quit") {
+                    print("[User Action] Button Quit Clicked!")
+
+                    NSApplication.shared.terminate(self)
+                }
             }
         }
         .padding()

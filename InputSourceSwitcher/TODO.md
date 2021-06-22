@@ -9,6 +9,7 @@
 - [ ] 添加退出按钮
 - [ ] 设置应用图标、想一个好听的名字
 - [ ] 设置签名在GitHub发布
+- [ ] Support 链接到自己的主页，可以加个pay pal的二维码？
 
 - [x] `26cd7e6 - add applescript to switch input sources` 自动读取当前的输入键盘，显示在App上
 

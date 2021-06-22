@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var currentInputSources: [InputSource] = []
+    @ObservedObject var MyInputSources: InputSourcesModel
 
     var body: some View {
         VStack {
             // show switch buttons
-            ForEach(currentInputSources) { inputSource in
+            ForEach(MyInputSources.currentInputSources) { inputSource in
                 HStack {
                     Text(inputSource.name)
                     Button("Switch To \(inputSource.name)") {
-                        print("[User Action] Button Switch To \(inputSource.name) Clicked!")
+                        print("[UI] Button Switch To \(inputSource.name) Clicked!")
                         SwitchInputSource(to: inputSource.name)
                     }
                 }
@@ -28,14 +28,15 @@ struct ContentView: View {
             HStack {
                 // get input sources from menu bar
                 Button("Reset") {
-                    print("[User Action] Button Reset Clicked!")
-                    currentInputSources = GetCurrentInputSourcesInMenubar()
+                    print("[UI] Button Reset Clicked!")
+                    MyInputSources.Reset()
+//                    currentInputSources = GetCurrentInputSourcesInMenubar()
                 }
 
                 Spacer()
 
                 Button("Quit") {
-                    print("[User Action] Button Quit Clicked!")
+                    print("[UI] Button Quit Clicked!")
 
                     NSApplication.shared.terminate(self)
                 }

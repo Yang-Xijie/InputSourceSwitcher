@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct InputSourceSwitcherApp: App {
+    @StateObject var MyInputSources = InputSourcesModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(MyInputSources: MyInputSources)
         }
 
         .commands {
@@ -23,6 +25,7 @@ struct InputSourceSwitcherApp: App {
             CommandGroup(replacing: .pasteboard) {
                 Button("Reset") {
                     print("[Menu Bar] Reset -> Reset")
+                    MyInputSources.Reset()
                 }
                 .keyboardShortcut("r", modifiers: .command)
             }

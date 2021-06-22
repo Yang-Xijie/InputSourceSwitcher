@@ -6,14 +6,18 @@
 //
 
 import Foundation
+struct InputSources {
+    var currentInputSources: [InputSource] = []
 
-struct InputSource: Identifiable {
-    var name: String = ""
-    var id: Int = 0
-}
+    init() {
+        currentInputSources = GetCurrentInputSourcesInMenubar()
+    }
 
-extension InputSource: CustomStringConvertible {
-    var description: String {
-        return name
+    mutating func Reset() {
+        currentInputSources = GetCurrentInputSourcesInMenubar()
+    }
+
+    mutating func InsertInputSource(name: String, id: Int) {
+        currentInputSources.append(InputSource(name: name, id: id))
     }
 }

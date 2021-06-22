@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E262681EC18006DB779 /* InputSourceModel.swift */; };
+		48462E292681F296006DB779 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E282681F296006DB779 /* InputSource.swift */; };
 		48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
 		48DA104C2681781700A3D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104B2681781700A3D537 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
+		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* InputSourceSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputSourceSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceSwitcherApp.swift; sourceTree = "<group>"; };
 		48DA10492681781500A3D537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				48DA10612681B27500A3D537 /* Struct */,
-				48DA10642681B66100A3D537 /* Feature */,
+				48DA10642681B66100A3D537 /* ViewModel */,
 				48DA10632681B63F00A3D537 /* SwiftUI */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA10502681781700A3D537 /* Info.plist */,
@@ -83,7 +87,9 @@
 		48DA10612681B27500A3D537 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				48462E282681F296006DB779 /* InputSource.swift */,
 				48DA105F2681B26E00A3D537 /* InputSources.swift */,
+				48DA10572681785E00A3D537 /* Applescripts.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -97,12 +103,12 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		48DA10642681B66100A3D537 /* Feature */ = {
+		48DA10642681B66100A3D537 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				48DA10572681785E00A3D537 /* Applescripts.swift */,
+				48462E262681EC18006DB779 /* InputSourceModel.swift */,
 			);
-			path = Feature;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DA10582681785E00A3D537 /* Applescripts.swift in Sources */,
+				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
+				48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */,
 				48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

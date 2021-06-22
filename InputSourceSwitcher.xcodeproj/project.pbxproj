@@ -12,6 +12,7 @@
 		48DA104C2681781700A3D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104B2681781700A3D537 /* Assets.xcassets */; };
 		48DA104F2681781700A3D537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104E2681781700A3D537 /* Preview Assets.xcassets */; };
 		48DA10582681785E00A3D537 /* Applescripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10572681785E00A3D537 /* Applescripts.swift */; };
+		48DA10602681B26E00A3D537 /* InputSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA105F2681B26E00A3D537 /* InputSources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputSourceSwitcher.entitlements; sourceTree = "<group>"; };
 		48DA10572681785E00A3D537 /* Applescripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applescripts.swift; sourceTree = "<group>"; };
 		48DA10592681925400A3D537 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48DA105A26819DAF00A3D537 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		48DA105F2681B26E00A3D537 /* InputSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +59,14 @@
 		48DA10462681781500A3D537 /* InputSourceSwitcher */ = {
 			isa = PBXGroup;
 			children = (
-				48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */,
-				48DA10492681781500A3D537 /* ContentView.swift */,
-				48DA10572681785E00A3D537 /* Applescripts.swift */,
+				48DA10612681B27500A3D537 /* Struct */,
+				48DA10642681B66100A3D537 /* Feature */,
+				48DA10632681B63F00A3D537 /* SwiftUI */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA10502681781700A3D537 /* Info.plist */,
 				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
 				48DA10592681925400A3D537 /* README.md */,
+				48DA105A26819DAF00A3D537 /* TODO.md */,
 				48DA104D2681781700A3D537 /* Preview Content */,
 			);
 			path = InputSourceSwitcher;
@@ -74,6 +78,31 @@
 				48DA104E2681781700A3D537 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48DA10612681B27500A3D537 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				48DA105F2681B26E00A3D537 /* InputSources.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		48DA10632681B63F00A3D537 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */,
+				48DA10492681781500A3D537 /* ContentView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		48DA10642681B66100A3D537 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				48DA10572681785E00A3D537 /* Applescripts.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DA10582681785E00A3D537 /* Applescripts.swift in Sources */,
+				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */,
 			);

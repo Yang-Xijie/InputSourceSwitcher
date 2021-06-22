@@ -5,8 +5,8 @@
 - [ ] 设置应用图标、想一个好听的名字——Source Switcher
 - [ ] 设置签名、更改应用图标并在GitHub发布
 - [ ] Support 链接到自己的主页，可以加个pay pal的二维码？
-- [ ] 提醒请在更换输入法之后reset——Click to `Reset` (⌘R) or `Quit` (⌘Q) to Restart app[change to App new name] after you change `Input Sources` in `System Preferences -> Keyboard`.
-- [ ] 完善菜单栏Support(放到about里面吧)、About、help，必要的话在主界面添加按钮
+
+- [ ] 在About中添加Support按钮并跳转至网页；
 - [ ] 中文翻译
 - [ ] Readme
 
@@ -19,5 +19,6 @@
 - [x] `d0812db - add KeyboardShortcuts` 将用户配置存储到user defaults里面（输入法和用户设置的快捷键），只有reset的时候才更新user defaults （使用的插件KeyboardShortcuts可以记录快捷键；自己写的获取思路是每次App打开都获取，比存储起来还好一点）
 - [x] `d0812db - add KeyboardShortcuts` 添加全局快捷键设置
 - [x] `71aea07 - refactor applescript` Add LICENSE
-
+- [x] `562d782 - add AboutView`提醒请在更换输入法之后reset——Click to `Reset` (⌘R) or `Quit` (⌘Q) to Restart app[change to App new name] after you change `Input Sources` in `System Preferences -> Keyboard`.
+- [x] `` 在菜单栏关联About按钮
 **Newer**

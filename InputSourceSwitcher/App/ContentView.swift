@@ -7,7 +7,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            BottomOptionView(MyInputSources: MyInputSources)
+            TopOptionView(MyInputSources: MyInputSources)
             Divider()
             HStack {
                 SwitchButtonView(MyInputSources: MyInputSources)
@@ -19,11 +19,17 @@ struct ContentView: View {
     }
 }
 
-struct BottomOptionView: View {
+struct TopOptionView: View {
     @ObservedObject var MyInputSources: InputSourcesModel
+    @Environment(\.openURL) var openURL
 
     var body: some View {
         HStack {
+            Button("About") {
+                            if let url = URL(string: "SourceSwitcher://Viewer") {
+                                 openURL(url)
+                            }
+                        }
             Button("Reset") {
                 print("[Button] Reset clicked")
                 MyInputSources.Reset() // reset InputSources and KeyboardShortcuts
@@ -42,8 +48,8 @@ struct SwitchButtonView: View {
     var body: some View {
         VStack {
             ForEach(MyInputSources.currentInputSources) { inputSource in
-                Button("Switch To \(inputSource.name)") {
-                    print("[UI] Button Switch To \(inputSource.name) Clicked!")
+                Button("Switch to \(inputSource.name)") {
+                    print("[UI] Button Switch to \(inputSource.name) Clicked!")
 
                     MyInputSources.SwitchInputSource(to: inputSource.name)
                 }

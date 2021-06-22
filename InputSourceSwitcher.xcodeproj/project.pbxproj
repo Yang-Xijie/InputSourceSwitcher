@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
-		48DA10442681781500A3D537 /* InputSourceSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputSourceSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48DA10442681781500A3D537 /* Source Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Source Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		48DA10492681781500A3D537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48DA104B2681781700A3D537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		48DA10452681781500A3D537 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48DA10442681781500A3D537 /* InputSourceSwitcher.app */,
+				48DA10442681781500A3D537 /* Source Switcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		48DA10432681781500A3D537 /* InputSourceSwitcher */ = {
+		48DA10432681781500A3D537 /* Source Switcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48DA10542681781700A3D537 /* Build configuration list for PBXNativeTarget "InputSourceSwitcher" */;
+			buildConfigurationList = 48DA10542681781700A3D537 /* Build configuration list for PBXNativeTarget "Source Switcher" */;
 			buildPhases = (
 				48DA10402681781500A3D537 /* Sources */,
 				48DA10412681781500A3D537 /* Frameworks */,
@@ -133,12 +133,12 @@
 			);
 			dependencies = (
 			);
-			name = InputSourceSwitcher;
+			name = "Source Switcher";
 			packageProductDependencies = (
 				48462E2D2681F871006DB779 /* KeyboardShortcuts */,
 			);
 			productName = InputSourceSwitcher;
-			productReference = 48DA10442681781500A3D537 /* InputSourceSwitcher.app */;
+			productReference = 48DA10442681781500A3D537 /* Source Switcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48DA10432681781500A3D537 /* InputSourceSwitcher */,
+				48DA10432681781500A3D537 /* Source Switcher */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +337,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.tsinghua.iosclub.InputSourceSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangxijie.SourceSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -361,7 +361,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.tsinghua.iosclub.InputSourceSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangxijie.SourceSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -379,7 +379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48DA10542681781700A3D537 /* Build configuration list for PBXNativeTarget "InputSourceSwitcher" */ = {
+		48DA10542681781700A3D537 /* Build configuration list for PBXNativeTarget "Source Switcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48DA10552681781700A3D537 /* Debug */,

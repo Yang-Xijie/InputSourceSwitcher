@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48DA10432681781500A3D537"
-               BuildableName = "InputSourceSwitcher.app"
-               BlueprintName = "InputSourceSwitcher"
+               BuildableName = "Source Switcher.app"
+               BlueprintName = "Source Switcher"
                ReferencedContainer = "container:InputSourceSwitcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48DA10432681781500A3D537"
-            BuildableName = "InputSourceSwitcher.app"
-            BlueprintName = "InputSourceSwitcher"
+            BuildableName = "Source Switcher.app"
+            BlueprintName = "Source Switcher"
             ReferencedContainer = "container:InputSourceSwitcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48DA10432681781500A3D537"
-            BuildableName = "InputSourceSwitcher.app"
-            BlueprintName = "InputSourceSwitcher"
+            BuildableName = "Source Switcher.app"
+            BlueprintName = "Source Switcher"
             ReferencedContainer = "container:InputSourceSwitcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

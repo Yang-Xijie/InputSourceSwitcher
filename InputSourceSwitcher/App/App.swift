@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct InputSourceSwitcherApp: App {
+struct SourceSwitcherApp: App {
     // use @StateObject to init an ObservableObject
     @StateObject var MyInputSources = InputSourcesModel()
 
@@ -40,5 +40,15 @@ struct InputSourceSwitcherApp: App {
                 .keyboardShortcut("?", modifiers: .command)
             }
         }
+        
+        WindowGroup{ // other scene
+            Text("About").padding()
+        }
+        .handlesExternalEvents(matching: Set(arrayLiteral: "*"))
+        
+        WindowGroup{ // other scene
+            Text("HAHA").padding()
+        }
+        .handlesExternalEvents(matching: Set(arrayLiteral: "*"))
     }
 }

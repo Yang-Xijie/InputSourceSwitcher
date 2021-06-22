@@ -11,6 +11,7 @@
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
 		48DA104C2681781700A3D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104B2681781700A3D537 /* Assets.xcassets */; };
 		48DA104F2681781700A3D537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104E2681781700A3D537 /* Preview Assets.xcassets */; };
+		48DA10582681785E00A3D537 /* Applescripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10572681785E00A3D537 /* Applescripts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		48DA104E2681781700A3D537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48DA10502681781700A3D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputSourceSwitcher.entitlements; sourceTree = "<group>"; };
+		48DA10572681785E00A3D537 /* Applescripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applescripts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */,
 				48DA10492681781500A3D537 /* ContentView.swift */,
+				48DA10572681785E00A3D537 /* Applescripts.swift */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA10502681781700A3D537 /* Info.plist */,
 				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DA10582681785E00A3D537 /* Applescripts.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */,
 			);

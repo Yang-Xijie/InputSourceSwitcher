@@ -11,9 +11,21 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, world!")
-            Button("Button") {
-                print("Button Clicked!")
-                ToggleNightMode()
+            Button("ToggleDarkMode") {
+                print("Button ToggleDarkMode Clicked!")
+                ToggleDarkMode()
+            }
+            Button("SwitchToHiragana") {
+                print("Button SwitchToHiragana Clicked!")
+                SwitchInputSource(to: "Hiragana")
+            }
+            Button("SwitchToABC") {
+                print("Button SwitchToHiragana Clicked!")
+                SwitchInputSource(to: "ABC")
+            }
+            Button("SwitchToPinyinSimplified") {
+                print("Button SwitchToHiragana Clicked!")
+                SwitchInputSource(to: "Pinyin - Simplified")
             }
         }
         .padding()
@@ -27,8 +39,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+// struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+// }

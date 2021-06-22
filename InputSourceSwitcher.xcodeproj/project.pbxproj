@@ -23,6 +23,7 @@
 		48DA10502681781700A3D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputSourceSwitcher.entitlements; sourceTree = "<group>"; };
 		48DA10572681785E00A3D537 /* Applescripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applescripts.swift; sourceTree = "<group>"; };
+		48DA10592681925400A3D537 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA10502681781700A3D537 /* Info.plist */,
 				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
+				48DA10592681925400A3D537 /* README.md */,
 				48DA104D2681781700A3D537 /* Preview Content */,
 			);
 			path = InputSourceSwitcher;

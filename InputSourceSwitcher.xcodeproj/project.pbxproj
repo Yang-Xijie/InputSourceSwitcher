@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E262681EC18006DB779 /* InputSourceModel.swift */; };
 		48462E292681F296006DB779 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E282681F296006DB779 /* InputSource.swift */; };
-		48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */; };
+		48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48462E2D2681F871006DB779 /* KeyboardShortcuts */; };
+		48DA10482681781500A3D537 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* App.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
 		48DA104C2681781700A3D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104B2681781700A3D537 /* Assets.xcassets */; };
 		48DA104F2681781700A3D537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DA104E2681781700A3D537 /* Preview Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* InputSourceSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputSourceSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceSwitcherApp.swift; sourceTree = "<group>"; };
+		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		48DA10492681781500A3D537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48DA104B2681781700A3D537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48DA104E2681781700A3D537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -38,12 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48462E312681F9AD006DB779 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				48DA105A26819DAF00A3D537 /* TODO.md */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		48462E3426821892006DB779 /* Applesript */ = {
+			isa = PBXGroup;
+			children = (
+				48DA10572681785E00A3D537 /* Applescripts.swift */,
+			);
+			path = Applesript;
+			sourceTree = "<group>";
+		};
+		48462E352682193C006DB779 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				48DA10472681781500A3D537 /* App.swift */,
+				48DA10492681781500A3D537 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		48DA103B2681781500A3D537 = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +90,15 @@
 		48DA10462681781500A3D537 /* InputSourceSwitcher */ = {
 			isa = PBXGroup;
 			children = (
-				48DA10612681B27500A3D537 /* Struct */,
+				48462E352682193C006DB779 /* App */,
+				48DA10612681B27500A3D537 /* DataStructure */,
+				48462E3426821892006DB779 /* Applesript */,
 				48DA10642681B66100A3D537 /* ViewModel */,
-				48DA10632681B63F00A3D537 /* SwiftUI */,
-				48DA104B2681781700A3D537 /* Assets.xcassets */,
+				48462E312681F9AD006DB779 /* Other */,
 				48DA10502681781700A3D537 /* Info.plist */,
 				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
+				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA10592681925400A3D537 /* README.md */,
-				48DA105A26819DAF00A3D537 /* TODO.md */,
 				48DA104D2681781700A3D537 /* Preview Content */,
 			);
 			path = InputSourceSwitcher;
@@ -84,23 +112,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		48DA10612681B27500A3D537 /* Struct */ = {
+		48DA10612681B27500A3D537 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
 				48462E282681F296006DB779 /* InputSource.swift */,
 				48DA105F2681B26E00A3D537 /* InputSources.swift */,
-				48DA10572681785E00A3D537 /* Applescripts.swift */,
 			);
-			path = Struct;
-			sourceTree = "<group>";
-		};
-		48DA10632681B63F00A3D537 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				48DA10472681781500A3D537 /* InputSourceSwitcherApp.swift */,
-				48DA10492681781500A3D537 /* ContentView.swift */,
-			);
-			path = SwiftUI;
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		48DA10642681B66100A3D537 /* ViewModel */ = {
@@ -127,6 +145,9 @@
 			dependencies = (
 			);
 			name = InputSourceSwitcher;
+			packageProductDependencies = (
+				48462E2D2681F871006DB779 /* KeyboardShortcuts */,
+			);
 			productName = InputSourceSwitcher;
 			productReference = 48DA10442681781500A3D537 /* InputSourceSwitcher.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 48DA103B2681781500A3D537;
+			packageReferences = (
+				48462E2C2681F871006DB779 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 48DA10452681781500A3D537 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,7 +209,7 @@
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */,
-				48DA10482681781500A3D537 /* InputSourceSwitcherApp.swift in Sources */,
+				48DA10482681781500A3D537 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48462E2C2681F871006DB779 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48462E2D2681F871006DB779 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48462E2C2681F871006DB779 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48DA103C2681781500A3D537 /* Project object */;
 }

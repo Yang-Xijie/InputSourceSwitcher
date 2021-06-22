@@ -1,11 +1,5 @@
-//
-//  InputSources.swift
-//  InputSourceSwitcher
-//
-//  Created by 杨希杰 on 2021/6/22.
-//
-
 import Foundation
+import KeyboardShortcuts
 
 class InputSourcesModel: ObservableObject {
     // MARK: - Create Model
@@ -26,9 +20,16 @@ class InputSourcesModel: ObservableObject {
 
     func Reset() {
         model.Reset()
+        for inputSource in model.currentInputSources {
+            KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource.name))
+        }
+        
+        print("[Model] Reset()")
     }
 
     func InsertInputSourse(name: String, id: Int) {
         model.InsertInputSource(name: name, id: id)
+        
+        print("[Model] InsertInputSource(\(name)")
     }
 }

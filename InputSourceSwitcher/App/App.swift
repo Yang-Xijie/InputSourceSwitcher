@@ -1,25 +1,18 @@
-//
-//  InputSourceSwitcherApp.swift
-//  InputSourceSwitcher
-//
-//  Created by 杨希杰 on 2021/6/22.
-//
-
 import SwiftUI
 
 @main
 struct InputSourceSwitcherApp: App {
+    // use @StateObject to init an ObservableObject
     @StateObject var MyInputSources = InputSourcesModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView(MyInputSources: MyInputSources)
         }
-
         .commands {
-            // Clear default items
-            CommandGroup(replacing: .undoRedo) {}
-            CommandGroup(replacing: .newItem) {}
+            // clear macOS default items
+            CommandGroup(replacing: .undoRedo) {} // Undo Redo
+            CommandGroup(replacing: .newItem) {} // New Window
 
             // customized items
             CommandGroup(replacing: .pasteboard) {

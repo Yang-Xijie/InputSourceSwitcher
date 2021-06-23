@@ -7,7 +7,7 @@ class InputSourcesModel: ObservableObject {
     @Published private var model: InputSources = InputSourcesModel.createMyInputSources()
 
     private static func createMyInputSources() -> InputSources {
-        // TODO: add
+        // TODO: add restart consideration -- what if user changes System Input Sources when app quit?
         return InputSources()
     }
 
@@ -23,12 +23,12 @@ class InputSourcesModel: ObservableObject {
     func Reset() {
         for inputSource in model.inputSources {
             KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource.name))
-            print("[KeyboardShortcuts] reset \(inputSource.name)")
+            print(Time() + "[KeyboardShortcuts] reset \(inputSource.name)")
         }
 
         model.LoadNewInputSourcesFromSystem()
 
-        print("[Model] Reset()")
+        print(Time() + "[Model] Reset()")
     }
 
     /// `Update`: **re-get** Input Sources from system and **save**  shortcut settings at the same time.
@@ -59,36 +59,36 @@ class InputSourcesModel: ObservableObject {
 
         let inputSourcesToResetShortcut: Set<String> = Set(original).subtracting(Set(new))
 
-        print("[Model Debug]\n\toriginalInputSources:\(originalInputSources)\n\tnewInputSources:\(newInputSources)\n\tinputSourcesToResetShortcut:\(inputSourcesToResetShortcut)\n")
+        print(Time() + "[Model Debug]\n\toriginalInputSources:\(originalInputSources)\n\tnewInputSources:\(newInputSources)\n\tinputSourcesToResetShortcut:\(inputSourcesToResetShortcut)")
 
         // Then, use their names to reset their shortcuts
 
         if inputSourcesToResetShortcut != Set<String>() {
             for inputSource in inputSourcesToResetShortcut {
                 KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource))
-                print("[KeyboardShortcuts] reset \(inputSource)")
+                print(Time() + "[KeyboardShortcuts] reset \(inputSource)")
             }
         }
 
         // Next, refresh InputSourcesModel
         model.LoadNewInputSourcesFromSystem()
 
-        print("[Model] Update()")
+        print(Time() + "[Model] Update()")
     }
 
     func Restart() {
-        print("[Model] Restart")
+        print(Time() + "[Model] Restart")
     }
 
     func InsertInputSource(inputSourceName: String, id: Int) {
         model.InsertInputSource(name: inputSourceName, id: id)
 
-        print("[Model] InsertInputSource(\(inputSourceName)")
+        print(Time() + "[Model] InsertInputSource(\(inputSourceName)")
     }
 
     func SwitchInputSource(to inputSourceName: String) {
         model.SwitchInputSource(to: inputSourceName)
 
-        print("[Model] Switch to InputSource\(inputSourceName)")
+        print(Time() + "[Model] Switch to InputSource\(inputSourceName)")
     }
 }

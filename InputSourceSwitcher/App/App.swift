@@ -22,25 +22,30 @@ struct SourceSwitcherApp: App {
             CommandGroup(replacing: .newItem) {} // New Window
             CommandGroup(replacing: .help) {} // Help
 
-            // TODO: Add cmd R
-//            // [customized items]
-//            CommandGroup(replacing: .pasteboard) { // Cut Copy Paste...
-//                Button("Reset") {
-//                    print("[Menu Bar] Reset -> Reset")
-//                    MyInputSources.Reset()
-//                }
-//                .keyboardShortcut("r", modifiers: .command)
-//            }
+            // [customized items]
+            CommandGroup(replacing: .pasteboard) { // Cut Copy Paste...
+                // [Edit -> Reset]
+                Button("Reset") {
+                    print(Time() + "[Menu Bar] Edit -> Reset")
+                    appDelegate.MyInputSources.Reset()
+                }.keyboardShortcut("r", modifiers: .command)
+
+                // [Edit -> Update]
+                Button("Update") {
+                    print(Time() + "[Menu Bar] Edit -> Update")
+                    appDelegate.MyInputSources.Update()
+                }.keyboardShortcut("u", modifiers: .command)
+            }
 
             // replace system menu bar `About` to my `AboutView`
             CommandGroup(replacing: .appInfo) { // About
                 Button("About") {
-                    print("[Menu Bar] App -> About")
+                    print(Time() + "[Menu Bar] App -> About")
                     // `Target -> Info -> URL Types -> URL Schemes`://Viewer
                     if let url = URL(string: "SourceSwitcherAbout://Viewer") {
                         openURL(url)
                     }
-                }
+                }.keyboardShortcut("i", modifiers: .command)
             }
         }
     }

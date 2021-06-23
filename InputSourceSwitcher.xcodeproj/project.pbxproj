@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831FBE02683B46900D6C6F8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831FBDF2683B46900D6C6F8 /* Log.swift */; };
 		48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E262681EC18006DB779 /* InputSourceModel.swift */; };
 		48462E292681F296006DB779 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E282681F296006DB779 /* InputSource.swift */; };
 		48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48462E2D2681F871006DB779 /* KeyboardShortcuts */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4831FBDE2683AA0700D6C6F8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = InputSourceSwitcher/LICENSE; sourceTree = SOURCE_ROOT; };
+		4831FBDF2683B46900D6C6F8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4880B5362683819300D53186 /* Shortcuts.swift */,
+				4831FBDF2683B46900D6C6F8 /* Log.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -121,6 +125,7 @@
 				4858851A268398F7000D36BF /* Other */,
 				48462E312681F9AD006DB779 /* Docs */,
 				48DA10592681925400A3D537 /* README.md */,
+				4831FBDE2683AA0700D6C6F8 /* LICENSE */,
 				4858851926839730000D36BF /* macOS */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA104D2681781700A3D537 /* Preview Content */,
@@ -230,6 +235,7 @@
 			files = (
 				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
+				4831FBE02683B46900D6C6F8 /* Log.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				4880B53A26838FC800D53186 /* Applesripts.swift in Sources */,
 				4880B5372683819300D53186 /* Shortcuts.swift in Sources */,

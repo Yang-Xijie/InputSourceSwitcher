@@ -25,7 +25,7 @@ struct TopOptionView: View {
     var body: some View {
         HStack {
             Button("About") {
-                print("[Button] About clicked")
+                print(Time() + "[Button] About clicked")
 
                 // link to open `AboutView` window
                 // `Target -> Info -> URL Types -> URL Schemes`://Viewer
@@ -33,21 +33,24 @@ struct TopOptionView: View {
                     openURL(url)
                 }
             }
+            .keyboardShortcut("i", modifiers: .command)
 
             Button("Update") {
-                print("[Button] Update clicked")
+                print(Time() + "[Button] Update clicked")
 
                 MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
             }
+            .keyboardShortcut("u", modifiers: .command)
 
             Button("Reset") {
-                print("[Button] Reset clicked")
+                print(Time() + "[Button] Reset clicked")
 
                 MyInputSources.Reset() // reset KeyboardShortcuts and InputSources
             }
+            .keyboardShortcut("r", modifiers: .command)
 
             Button("Quit") {
-                print("[Button] Quit clicked")
+                print(Time() + "[Button] Quit clicked")
 
                 NSApplication.shared.terminate(self) // quit app == cmd Q
             }
@@ -56,6 +59,7 @@ struct TopOptionView: View {
     }
 }
 
+// TODO: 将两个View合在一起不然会错行（特别多的时候
 struct SwitchButtonView: View {
     @ObservedObject var MyInputSources: InputSourcesModel
 
@@ -63,7 +67,7 @@ struct SwitchButtonView: View {
         VStack {
             ForEach(MyInputSources.inputSources) { inputSource in
                 Button("Switch to \(inputSource.name)") {
-                    print("[UI] Button Switch to \(inputSource.name) Clicked!")
+                    print(Time() + "[UI] Button Switch to \(inputSource.name) Clicked!")
 
                     MyInputSources.SwitchInputSource(to: inputSource.name)
                 }
@@ -89,7 +93,8 @@ struct ShortcutsView: View {
                     }
                     .onAppear {
                         KeyboardShortcuts.onKeyDown(for: shortcut) {
-                            print("[Shortcuts] shortcut of \(inputSource.name) down")
+                            print(Time() + "[Shortcuts] shortcut of \(inputSource.name) down")
+                            
                             MyInputSources.SwitchInputSource(to: inputSource.name)
                         }
                     }

@@ -1,13 +1,13 @@
 #  TODO
-- [ ] 让应用常驻后台（能隐藏起来）
+- [ ] 隐藏起来Dock栏图标—— 不太需要，显示`AboutView`的话应该需要有程序坞图标；或者让用户自己调节
 - [ ] 从Control Center获取输入法的图标并显示在App中
-- [ ] 给应用添加menu bar（右上角） 点击打开主窗口
 - [ ] 设置应用图标
-- [ ] 设置签名、更改应用图标并在GitHub发布
-- [ ] Support 链接到自己的主页，可以加个pay pal的二维码？
-- [ ] 在About中添加Support按钮并跳转至网页；还有LISENCE
+- [ ] 在GitHub发布
+- [ ] AboutView
+- [ ] 在About中添加Support按钮并跳转至网页 Support 链接到自己的主页，可以加个pay pal的二维码？
 - [ ] 中文翻译
-- [ ] Readme
+- [ ] README 写上用到的开源项目和LISENCE
+- [ ] 其他语言环境（如中文）下的测试
 
 **Older**
 
@@ -20,5 +20,6 @@
 - [x] `71aea07 - refactor applescript` Add LICENSE
 - [x] `562d782 - add AboutView`提醒请在更换输入法之后reset——Click to `Reset` (⌘R) or `Quit` (⌘Q) to Restart app[change to App new name] after you change `Input Sources` in `System Preferences -> Keyboard`.
 - [x] `de3423f - add About menu bar` 在菜单栏关联About按钮
-
+- [x] `3195f1b - change to menu bar app and refactor data structure and modle` 让应用常驻后台
+- [x] `3195f1b - change to menu bar app and refactor data structure and modle` 给应用添加menu bar（右上角） 点击打开主窗口
 **Newer**

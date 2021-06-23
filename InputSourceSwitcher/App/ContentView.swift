@@ -8,11 +8,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TopOptionView(MyInputSources: MyInputSources)
+
             Divider()
-            HStack {
-                SwitchButtonView(MyInputSources: MyInputSources)
-                ShortcutsView(MyInputSources: MyInputSources)
-            }
+
+            SwitcherView(MyInputSources: MyInputSources)
         }
         .padding()
     }
@@ -59,45 +58,28 @@ struct TopOptionView: View {
     }
 }
 
-// TODO: 将两个View合在一起不然会错行（特别多的时候
-struct SwitchButtonView: View {
+struct SwitcherView: View {
     @ObservedObject var MyInputSources: InputSourcesModel
 
     var body: some View {
-        VStack {
-            ForEach(MyInputSources.inputSources) { inputSource in
-                Button("Switch to \(inputSource.name)") {
-                    print(Time() + "[UI] Button Switch to \(inputSource.name) Clicked!")
-
-                    MyInputSources.SwitchInputSource(to: inputSource.name)
-                }
-            }
-        }
-        .padding()
-    }
-}
-
-struct ShortcutsView: View {
-    @ObservedObject var MyInputSources: InputSourcesModel
-
-    var body: some View {
-        VStack {
-            // show switch buttons
+        // Use right alignment to put `record shortcut` who are all the same size to make SwitcherView orderly
+        VStack(alignment: .trailing) {
             ForEach(MyInputSources.inputSources) { inputSource in
                 HStack {
-                    let shortcut = KeyboardShortcuts.Name(inputSource.name)
+                    Button("Switch to \(inputSource.name)") {
+                        print(Time() + "[UI] Button Switch to \(inputSource.name) Clicked!")
 
-                    HStack(alignment: .firstTextBaseline) {
-                        KeyboardShortcuts.Recorder(for: shortcut)
-                            .padding(.trailing, 10)
+                        MyInputSources.SwitchInputSource(to: inputSource.name)
                     }
-                    .onAppear {
-                        KeyboardShortcuts.onKeyDown(for: shortcut) {
-                            print(Time() + "[Shortcuts] shortcut of \(inputSource.name) down")
-                            
-                            MyInputSources.SwitchInputSource(to: inputSource.name)
+
+                    KeyboardShortcuts.Recorder(for: KeyboardShortcuts.Name(inputSource.name))
+                        .onAppear {
+                            KeyboardShortcuts.onKeyDown(for: KeyboardShortcuts.Name(inputSource.name)) {
+                                print(Time() + "[Shortcuts] shortcut of \(inputSource.name) down")
+
+                                MyInputSources.SwitchInputSource(to: inputSource.name)
+                            }
                         }
-                    }
                 }
             }
         }

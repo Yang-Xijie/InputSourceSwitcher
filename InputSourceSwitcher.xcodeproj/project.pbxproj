@@ -10,6 +10,8 @@
 		48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E262681EC18006DB779 /* InputSourceModel.swift */; };
 		48462E292681F296006DB779 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E282681F296006DB779 /* InputSource.swift */; };
 		48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48462E2D2681F871006DB779 /* KeyboardShortcuts */; };
+		4880B5372683819300D53186 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B5362683819300D53186 /* Shortcuts.swift */; };
+		4880B53A26838FC800D53186 /* Applesripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B53926838FC800D53186 /* Applesripts.swift */; };
 		48CE6B692682611D00B1A186 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6B682682611D00B1A186 /* AboutView.swift */; };
 		48DA10482681781500A3D537 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* App.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
@@ -21,6 +23,9 @@
 /* Begin PBXFileReference section */
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
+		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
+		4880B53826838A0F00D53186 /* DEVELOP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVELOP.md; sourceTree = "<group>"; };
+		4880B53926838FC800D53186 /* Applesripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applesripts.swift; sourceTree = "<group>"; };
 		48CE6B682682611D00B1A186 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* Source Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Source Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				48DA105A26819DAF00A3D537 /* TODO.md */,
+				4880B53826838A0F00D53186 /* DEVELOP.md */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -62,6 +68,14 @@
 				48CE6B682682611D00B1A186 /* AboutView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4880B53B26838FD700D53186 /* Applescript */ = {
+			isa = PBXGroup;
+			children = (
+				4880B53926838FC800D53186 /* Applesripts.swift */,
+			);
+			path = Applescript;
 			sourceTree = "<group>";
 		};
 		48DA103B2681781500A3D537 = {
@@ -83,9 +97,11 @@
 		48DA10462681781500A3D537 /* InputSourceSwitcher */ = {
 			isa = PBXGroup;
 			children = (
-				48462E352682193C006DB779 /* App */,
 				48DA10612681B27500A3D537 /* DataStructure */,
 				48DA10642681B66100A3D537 /* ViewModel */,
+				48462E352682193C006DB779 /* App */,
+				4880B53B26838FD700D53186 /* Applescript */,
+				4880B5362683819300D53186 /* Shortcuts.swift */,
 				48462E312681F9AD006DB779 /* Other */,
 				48DA10592681925400A3D537 /* README.md */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
@@ -199,6 +215,8 @@
 				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
+				4880B53A26838FC800D53186 /* Applesripts.swift in Sources */,
+				4880B5372683819300D53186 /* Shortcuts.swift in Sources */,
 				48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */,
 				48CE6B692682611D00B1A186 /* AboutView.swift in Sources */,
 				48DA10482681781500A3D537 /* App.swift in Sources */,

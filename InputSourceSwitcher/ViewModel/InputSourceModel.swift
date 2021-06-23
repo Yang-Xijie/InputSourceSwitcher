@@ -7,35 +7,38 @@ class InputSourcesModel: ObservableObject {
     @Published private var model: InputSources = InputSourcesModel.createMyInputSources()
 
     private static func createMyInputSources() -> InputSources {
+        // TODO: add 
         return InputSources()
     }
 
-    // MARK: - Access to Data of Model
+    // MARK: - Access to Data in Model
 
-    var currentInputSources: [InputSource] {
-        model.currentInputSources
+    var inputSources: [InputSource] {
+        model.inputSources
     }
 
     // MARK: - Deal with Intents from View
 
+    /// `Reset`: **reset** the shortcut settings and **re-get** Input Sources from system.
     func Reset() {
-        model.Reset()
-        for inputSource in model.currentInputSources {
+        for inputSource in model.inputSources {
             KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource.name))
+            print("[KeyboardShortcuts] reset \(inputSource.name)")
         }
 
+        model.GetNewInputSourcesFromSystem()
         print("[Model] Reset()")
     }
 
-    func InsertInputSourse(name: String, id: Int) {
-        model.InsertInputSource(name: name, id: id)
+    func InsertInputSource(inputSourceName: String, id: Int) {
+        model.InsertInputSource(name: inputSourceName, id: id)
 
-        print("[Model] InsertInputSource(\(name)")
+        print("[Model] InsertInputSource(\(inputSourceName)")
     }
 
-    func SwitchInputSource(to sourceName: String) {
-        model.SwitchInputSource(to: sourceName)
-        
-        print("[Model] Switch to InputSource\(sourceName)")
+    func SwitchInputSource(to inputSourceName: String) {
+        model.SwitchInputSource(to: inputSourceName)
+
+        print("[Model] Switch to InputSource\(inputSourceName)")
     }
 }

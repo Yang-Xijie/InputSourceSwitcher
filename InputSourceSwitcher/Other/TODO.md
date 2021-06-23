@@ -2,11 +2,10 @@
 - [ ] 让应用常驻后台（能隐藏起来）
 - [ ] 从Control Center获取输入法的图标并显示在App中
 - [ ] 给应用添加menu bar（右上角） 点击打开主窗口
-- [ ] 设置应用图标、想一个好听的名字——Source Switcher
+- [ ] 设置应用图标
 - [ ] 设置签名、更改应用图标并在GitHub发布
 - [ ] Support 链接到自己的主页，可以加个pay pal的二维码？
-
-- [ ] 在About中添加Support按钮并跳转至网页；
+- [ ] 在About中添加Support按钮并跳转至网页；还有LISENCE
 - [ ] 中文翻译
 - [ ] Readme
 
@@ -20,5 +19,6 @@
 - [x] `d0812db - add KeyboardShortcuts` 添加全局快捷键设置
 - [x] `71aea07 - refactor applescript` Add LICENSE
 - [x] `562d782 - add AboutView`提醒请在更换输入法之后reset——Click to `Reset` (⌘R) or `Quit` (⌘Q) to Restart app[change to App new name] after you change `Input Sources` in `System Preferences -> Keyboard`.
-- [x] `` 在菜单栏关联About按钮
+- [x] `de3423f - add About menu bar` 在菜单栏关联About按钮
+
 **Newer**

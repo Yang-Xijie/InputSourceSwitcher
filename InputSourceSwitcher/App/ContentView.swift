@@ -3,7 +3,7 @@ import SwiftUI
 
 // [ContentView]
 struct ContentView: View {
-    @ObservedObject var MyInputSources: InputSourcesModel
+    @ObservedObject var MyInputSources: InputSourcesModel = InputSourcesModel()
 
     var body: some View {
         VStack {
@@ -15,7 +15,6 @@ struct ContentView: View {
             }
         }
         .padding()
-        .frame(idealWidth: 300,maxWidth: .infinity, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/ )
     }
 }
 
@@ -26,20 +25,35 @@ struct TopOptionView: View {
     var body: some View {
         HStack {
             Button("About") {
+                print("[Button] About clicked")
+
+                // link to open `AboutView` window
                 // `Target -> Info -> URL Types -> URL Schemes`://Viewer
                 if let url = URL(string: "SourceSwitcherAbout://Viewer") {
                     openURL(url)
                 }
             }
+
+            Button("Update") {
+                print("[Button] Update clicked")
+
+                // TODO: Update()
+                // MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
+            }
+
             Button("Reset") {
                 print("[Button] Reset clicked")
-                MyInputSources.Reset() // reset InputSources and KeyboardShortcuts
+
+                MyInputSources.Reset() // reset KeyboardShortcuts and InputSources
             }
+
             Button("Quit") {
                 print("[Button] Quit clicked")
+
                 NSApplication.shared.terminate(self) // quit app == cmd Q
             }
         }
+        .padding()
     }
 }
 
@@ -48,7 +62,7 @@ struct SwitchButtonView: View {
 
     var body: some View {
         VStack {
-            ForEach(MyInputSources.currentInputSources) { inputSource in
+            ForEach(MyInputSources.inputSources) { inputSource in
                 Button("Switch to \(inputSource.name)") {
                     print("[UI] Button Switch to \(inputSource.name) Clicked!")
 
@@ -56,6 +70,7 @@ struct SwitchButtonView: View {
                 }
             }
         }
+        .padding()
     }
 }
 
@@ -65,7 +80,7 @@ struct ShortcutsView: View {
     var body: some View {
         VStack {
             // show switch buttons
-            ForEach(MyInputSources.currentInputSources) { inputSource in
+            ForEach(MyInputSources.inputSources) { inputSource in
                 HStack {
                     let shortcut = KeyboardShortcuts.Name(inputSource.name)
 
@@ -82,5 +97,6 @@ struct ShortcutsView: View {
                 }
             }
         }
+        .padding()
     }
 }

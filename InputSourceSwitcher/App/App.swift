@@ -69,7 +69,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController?.view = NSHostingView(rootView: ContentView(MyInputSources: MyInputSources))
         popover.contentViewController?.view.window?.makeKey()
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        statusBarItem?.button?.title = "SwitchInputSource" // TODO: change it to a icon
+        statusBarItem?.button?.image = NSImage(
+            systemSymbolName: "keyboard",
+            accessibilityDescription: "globe")?
+            .withSymbolConfiguration(NSImage.SymbolConfiguration(textStyle: .body, scale: .large))
         statusBarItem?.button?.action = #selector(AppDelegate.togglePopover(_:))
     }
 

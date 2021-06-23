@@ -12,8 +12,12 @@ struct InputSources {
     // MARK: - functions
 
     /// Update currentInputSources in model.
-    mutating func GetNewInputSourcesFromSystem() {
+    mutating func LoadNewInputSourcesFromSystem() {
         inputSources = UseApplescriptToGetSystemInputSourcesInMenubar()
+    }
+
+    func GetNewInputSourcesFromSystem() -> [InputSource] {
+        return UseApplescriptToGetSystemInputSourcesInMenubar()
     }
 
     mutating func InsertInputSource(name: String, id: Int) {

@@ -37,8 +37,7 @@ struct TopOptionView: View {
             Button("Update") {
                 print("[Button] Update clicked")
 
-                // TODO: Update()
-                // MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
+                MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
             }
 
             Button("Reset") {

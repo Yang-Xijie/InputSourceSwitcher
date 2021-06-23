@@ -51,13 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48462E312681F9AD006DB779 /* Other */ = {
+		48462E312681F9AD006DB779 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
 				48DA105A26819DAF00A3D537 /* TODO.md */,
 				4880B53826838A0F00D53186 /* DEVELOP.md */,
 			);
-			path = Other;
+			path = Docs;
 			sourceTree = "<group>";
 		};
 		48462E352682193C006DB779 /* App */ = {
@@ -68,6 +68,23 @@
 				48CE6B682682611D00B1A186 /* AboutView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4858851926839730000D36BF /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
+				48DA10502681781700A3D537 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		4858851A268398F7000D36BF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4880B5362683819300D53186 /* Shortcuts.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		4880B53B26838FD700D53186 /* Applescript */ = {
@@ -101,12 +118,11 @@
 				48DA10642681B66100A3D537 /* ViewModel */,
 				48462E352682193C006DB779 /* App */,
 				4880B53B26838FD700D53186 /* Applescript */,
-				4880B5362683819300D53186 /* Shortcuts.swift */,
-				48462E312681F9AD006DB779 /* Other */,
+				4858851A268398F7000D36BF /* Other */,
+				48462E312681F9AD006DB779 /* Docs */,
 				48DA10592681925400A3D537 /* README.md */,
+				4858851926839730000D36BF /* macOS */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
-				48DA10502681781700A3D537 /* Info.plist */,
-				48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */,
 				48DA104D2681781700A3D537 /* Preview Content */,
 			);
 			path = InputSourceSwitcher;
@@ -346,7 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = InputSourceSwitcher/InputSourceSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = InputSourceSwitcher/macOS/InputSourceSwitcher.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -354,7 +370,7 @@
 				DEVELOPMENT_TEAM = C4W6UUH267;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = InputSourceSwitcher/Info.plist;
+				INFOPLIST_FILE = InputSourceSwitcher/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -371,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = InputSourceSwitcher/InputSourceSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = InputSourceSwitcher/macOS/InputSourceSwitcher.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -379,7 +395,7 @@
 				DEVELOPMENT_TEAM = C4W6UUH267;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = InputSourceSwitcher/Info.plist;
+				INFOPLIST_FILE = InputSourceSwitcher/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

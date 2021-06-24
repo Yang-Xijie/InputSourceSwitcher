@@ -28,7 +28,6 @@
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
-		4880B53826838A0F00D53186 /* DEVELOP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVELOP.md; sourceTree = "<group>"; };
 		4880B53926838FC800D53186 /* Applesripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applesripts.swift; sourceTree = "<group>"; };
 		48860FC726845485002A5487 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		48CE6B682682611D00B1A186 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -40,7 +39,6 @@
 		48DA10502681781700A3D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48DA10512681781700A3D537 /* InputSourceSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InputSourceSwitcher.entitlements; sourceTree = "<group>"; };
 		48DA10592681925400A3D537 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		48DA105A26819DAF00A3D537 /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		48DA105F2681B26E00A3D537 /* InputSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,8 +57,6 @@
 		48462E312681F9AD006DB779 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
-				48DA105A26819DAF00A3D537 /* TODO.md */,
-				4880B53826838A0F00D53186 /* DEVELOP.md */,
 			);
 			path = Docs;
 			sourceTree = "<group>";

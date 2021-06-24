@@ -19,11 +19,9 @@ struct AboutView: View {
             Divider()
 
             VStack(alignment: .leading) {
-                // TODO: add
                 Button("View it on GitHub") {
                     openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher")!)
                 }
-                // TODO: add
                 Button("Report a bug") {
                     openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher/issues")!)
                 }

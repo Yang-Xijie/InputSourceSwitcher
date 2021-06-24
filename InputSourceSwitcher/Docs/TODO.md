@@ -1,11 +1,10 @@
 #  TODO
 - [ ] AboutView
-- [ ] 设置应用图标
 - [ ] 添加动画效果
 - [ ] 中文翻译
-- [ ] README 写上用到的开源项目和LICENSE
-- [ ] 在GitHub发布
+
 - [ ] 添加测试模块
+- [ ] 让release总是最新的版本——是不是有什么脚本可以做到？
 
 - [ ] 其他语言环境（如中文）下的测试
 - [ ] build M1的版本并找同学测试
@@ -28,4 +27,8 @@
 - [x] `3195f1b - change to menu bar app and refactor data structure and modle` 让应用常驻后台
 - [x] `3195f1b - change to menu bar app and refactor data structure and modle` 给应用添加menu bar（右上角） 点击打开主窗口
 - [x] `43de067 - add AboutView` 在About中添加Support按钮并跳转至网页 Support 链接到自己的主页
+- [x] `9cb4f68 - add app icon` 设置应用图标
+- [x] README 写上用到的开源项目和LICENSE
+- [x] 在GitHub发布
+
 **Newer**

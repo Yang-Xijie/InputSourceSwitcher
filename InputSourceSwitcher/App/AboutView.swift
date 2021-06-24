@@ -21,11 +21,11 @@ struct AboutView: View {
             VStack(alignment: .leading) {
                 // TODO: add
                 Button("View it on GitHub") {
-                    openURL(URL(string: "https://google.com")!)
+                    openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher")!)
                 }
                 // TODO: add
                 Button("Report a bug") {
-                    openURL(URL(string: "https://google.com")!)
+                    openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher/issues")!)
                 }
 
                 HStack {
@@ -56,7 +56,5 @@ struct AboutView: View {
             }
         }
         .padding()
-
-//        .frame(width: 625, height: 300)
     }
 }

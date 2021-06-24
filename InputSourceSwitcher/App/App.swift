@@ -27,12 +27,14 @@ struct SourceSwitcherApp: App {
                 // [Edit -> Reset]
                 Button("Reset") {
                     print(Time() + "[Menu Bar] Edit -> Reset")
+
                     appDelegate.MyInputSources.Reset()
                 }.keyboardShortcut("r", modifiers: .command)
 
                 // [Edit -> Update]
                 Button("Update") {
                     print(Time() + "[Menu Bar] Edit -> Update")
+
                     appDelegate.MyInputSources.Update()
                 }.keyboardShortcut("u", modifiers: .command)
             }
@@ -41,7 +43,8 @@ struct SourceSwitcherApp: App {
             CommandGroup(replacing: .appInfo) { // About
                 Button("About") {
                     print(Time() + "[Menu Bar] App -> About")
-                    // `Target -> Info -> URL Types -> URL Schemes`://Viewer
+
+                    // `Xcode -> Target -> Info -> URL Types -> URL Schemes`://Viewer
                     if let url = URL(string: "SourceSwitcherAbout://Viewer") {
                         openURL(url)
                     }
@@ -71,7 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusBarItem?.button?.image = NSImage(
             systemSymbolName: "keyboard",
-            accessibilityDescription: "globe")?
+            accessibilityDescription: "keyboard")?
             .withSymbolConfiguration(NSImage.SymbolConfiguration(textStyle: .body, scale: .large))
         statusBarItem?.button?.action = #selector(AppDelegate.togglePopover(_:))
     }

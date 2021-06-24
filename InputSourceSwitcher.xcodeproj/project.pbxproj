@@ -13,6 +13,7 @@
 		48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48462E2D2681F871006DB779 /* KeyboardShortcuts */; };
 		4880B5372683819300D53186 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B5362683819300D53186 /* Shortcuts.swift */; };
 		4880B53A26838FC800D53186 /* Applesripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B53926838FC800D53186 /* Applesripts.swift */; };
+		48860FC826845485002A5487 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48860FC726845485002A5487 /* UserDefaults+.swift */; };
 		48CE6B692682611D00B1A186 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6B682682611D00B1A186 /* AboutView.swift */; };
 		48DA10482681781500A3D537 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* App.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		4880B53826838A0F00D53186 /* DEVELOP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVELOP.md; sourceTree = "<group>"; };
 		4880B53926838FC800D53186 /* Applesripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applesripts.swift; sourceTree = "<group>"; };
+		48860FC726845485002A5487 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		48CE6B682682611D00B1A186 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* Source Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Source Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				4880B5362683819300D53186 /* Shortcuts.swift */,
 				4831FBDF2683B46900D6C6F8 /* Log.swift */,
+				48860FC726845485002A5487 /* UserDefaults+.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
+				48860FC826845485002A5487 /* UserDefaults+.swift in Sources */,
 				4831FBE02683B46900D6C6F8 /* Log.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				4880B53A26838FC800D53186 /* Applesripts.swift in Sources */,

@@ -1,6 +1,6 @@
 import Foundation
 
-struct InputSource: Identifiable, Hashable {
+struct InputSource: Identifiable, Encodable, Decodable {
     var name: String = ""
     var id: Int = 0
 }

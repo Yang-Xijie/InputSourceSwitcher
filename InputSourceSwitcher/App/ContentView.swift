@@ -67,7 +67,7 @@ struct SwitcherView: View {
             ForEach(MyInputSources.inputSources) { inputSource in
                 HStack {
                     Button("Switch to \(inputSource.name)") {
-                        print(Time() + "[UI] Button Switch to \(inputSource.name) Clicked!")
+                        print(Time() + "[Button] Switch to \(inputSource.name) Clicked")
 
                         MyInputSources.SwitchInputSource(to: inputSource.name)
                     }
@@ -75,7 +75,7 @@ struct SwitcherView: View {
                     KeyboardShortcuts.Recorder(for: KeyboardShortcuts.Name(inputSource.name))
                         .onAppear {
                             KeyboardShortcuts.onKeyDown(for: KeyboardShortcuts.Name(inputSource.name)) {
-                                print(Time() + "[Shortcuts] shortcut of \(inputSource.name) down")
+                                print(Time() + "[KeyboardShortcuts] shortcut of \(inputSource.name) down")
 
                                 MyInputSources.SwitchInputSource(to: inputSource.name)
                             }

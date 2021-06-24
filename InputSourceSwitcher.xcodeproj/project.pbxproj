@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4831FBDE2683AA0700D6C6F8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = InputSourceSwitcher/LICENSE; sourceTree = SOURCE_ROOT; };
+		4831FBDE2683AA0700D6C6F8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		4831FBDF2683B46900D6C6F8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				48DA10462681781500A3D537 /* InputSourceSwitcher */,
+				4831FBDE2683AA0700D6C6F8 /* LICENSE */,
+				48DA10592681925400A3D537 /* README.md */,
 				48DA10452681781500A3D537 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,8 +129,6 @@
 				4880B53B26838FD700D53186 /* Applescript */,
 				4858851A268398F7000D36BF /* Other */,
 				48462E312681F9AD006DB779 /* Docs */,
-				48DA10592681925400A3D537 /* README.md */,
-				4831FBDE2683AA0700D6C6F8 /* LICENSE */,
 				4858851926839730000D36BF /* macOS */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA104D2681781700A3D537 /* Preview Content */,

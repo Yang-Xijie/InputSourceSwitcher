@@ -25,36 +25,35 @@ struct TopOptionView: View {
         HStack {
             Button("About") {
                 print(Time() + "[Button] About clicked")
-
                 // link to open `AboutView` window
                 // `Target -> Info -> URL Types -> URL Schemes`://Viewer
                 if let url = URL(string: "SourceSwitcherAbout://Viewer") {
                     openURL(url)
                 }
             }
+            .padding(.trailing)
             .keyboardShortcut("i", modifiers: .command)
 
             Button("Update") {
                 print(Time() + "[Button] Update clicked")
-
                 MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
             }
+
             .keyboardShortcut("u", modifiers: .command)
 
             Button("Reset") {
                 print(Time() + "[Button] Reset clicked")
-
                 MyInputSources.Reset() // reset KeyboardShortcuts and InputSources
             }
+
             .keyboardShortcut("r", modifiers: .command)
 
             Button("Quit") {
                 print(Time() + "[Button] Quit clicked")
-
                 NSApplication.shared.terminate(self) // quit app == cmd Q
             }
+            .padding(.leading)
         }
-        .padding()
     }
 }
 

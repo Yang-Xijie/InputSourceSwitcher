@@ -1,6 +1,5 @@
 #  TODO
 - [ ] AboutView
-- [ ] 在About中添加Support按钮并跳转至网页 Support 链接到自己的主页，可以加个pay pal的二维码？
 - [ ] 设置应用图标
 - [ ] 添加动画效果
 - [ ] 中文翻译
@@ -28,5 +27,5 @@
 - [x] `de3423f - add About menu bar` 在菜单栏关联About按钮
 - [x] `3195f1b - change to menu bar app and refactor data structure and modle` 让应用常驻后台
 - [x] `3195f1b - change to menu bar app and refactor data structure and modle` 给应用添加menu bar（右上角） 点击打开主窗口
-
+- [x] `43de067 - add AboutView` 在About中添加Support按钮并跳转至网页 Support 链接到自己的主页
 **Newer**

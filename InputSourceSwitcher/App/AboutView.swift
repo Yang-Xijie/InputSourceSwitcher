@@ -21,17 +21,18 @@ struct AboutView: View {
             VStack(alignment: .leading) {
                 // TODO: add
                 Button("View it on GitHub") {
-                    openURL(URL(string: "")!)
+                    openURL(URL(string: "https://google.com")!)
                 }
+                // TODO: add
                 Button("Report a bug") {
-                    openURL(URL(string: "")!)
+                    openURL(URL(string: "https://google.com")!)
                 }
 
                 HStack {
                     Button("Support") {
                         openURL(URL(string: "https://yang-xijie.github.io/postscript/support.html")!)
                     }
-                    Text("WeChat Pay / Alipay / PayPal")
+                    Text("WeChat Pay / Alipay")
                 }
             }
 

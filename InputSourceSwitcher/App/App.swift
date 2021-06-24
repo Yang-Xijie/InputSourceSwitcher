@@ -40,7 +40,7 @@ struct SourceSwitcherApp: App {
             }
 
             // replace system menu bar `About` to my `AboutView`
-            CommandGroup(replacing: .appInfo) { // About
+            CommandGroup(after: .appInfo) { // About
                 Button("About") {
                     print(Time() + "[Menu Bar] App -> About")
 

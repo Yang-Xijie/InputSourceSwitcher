@@ -8,11 +8,13 @@ This app uses `Applescript` to manipulate `UI operation` which is better than us
 
 ## Installation / Usage
 
-Download the release version and drop `Source Switcher.app`  into your `Application` folder. (may not be the latest version)
+Download the release version and drop `Source Switcher.app`  into your `Applications` folder. (may not be the latest version)
 
 Or clone this repo and build it on your Mac.
 
-**Notice**: You should go to `System Preferences -> Security & Privacy -> Privacy -> Accessiblity` to make `Source Switcher` able to execute Applescript on your Mac.
+**Notice**: You should go to `System Preferences -> Security & Privacy -> Privacy -> Accessiblity` to make `Source Switcher` able to execute Applescript on your Mac. You'd better perform this operation before you open this app for the first time. If no input source appears, just lick `Reset` to get your current input sources.
+
+**Notice**: If you get `Source Switcher.app can't be opened because Apple cannot check it for malicious software`, please open your `Applications` folder, find `Source Switcher.app` and `right click -> Open` to open the app. 
 
 ## Background
 
@@ -30,17 +32,15 @@ So one way is what [hatashiro / kawa](https://github.com/hatashiro/kawa) uses, w
 
 ## Open Source Projects that This App Uses
 
-[menubarpopoverswiftui2](https://github.com/zaferarican/menubarpopoverswiftui2)
-
-[LICENSE](https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE)
+[menubarpopoverswiftui2](https://github.com/zaferarican/menubarpopoverswiftui2) - [LICENSE](https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE)
 
 
-[KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts)
-
-[LICENSE](https://github.com/sindresorhus/KeyboardShortcuts/blob/main/license)
+[KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) - [LICENSE](https://github.com/sindresorhus/KeyboardShortcuts/blob/main/license)
 
 ## About
 
-Discuss about this app in the Discussion part. Any issue or pull request are welcome!
+Discuss about this app in the Discussion part. Check desired features in `Projects -> TODO`.  
 
-If you find this app saves your time or improves your efficency, feel free to [buy me a cup of coffee](https://yang-xijie.github.io/postscript/support.html) using WeChat Pay or Alipay.
+Any issue or pull request are welcome!
+
+If you find this tiny app improving your efficency, feel free to [buy me a cup of coffee](https://yang-xijie.github.io/postscript/support.html) using `WeChat Pay` or `Alipay`.

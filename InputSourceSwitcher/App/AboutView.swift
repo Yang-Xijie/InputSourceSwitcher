@@ -5,15 +5,15 @@ struct AboutView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("A menu bar App to **switch input sources** swiftly by shortcutson `macOS 11 Big Sur or later`.")
+            Text("A menu bar App to **switch input sources** swiftly by shortcuts on `macOS 11 Big Sur or later`.")
 
             Divider()
 
             VStack(alignment: .leading) {
-                Text("`About`: Open this window. (⌘I)")
-                Text("`Update`: Update input sources if you make changes in System Preferences. (⌘U)").lineLimit(nil)
-                Text("`Reset`: Clear all shortcuts. (⌘R)")
-                Text("`Quit`: Quit the app. (⌘Q)")
+                ButtonInstructionView(buttonName: "About", shortcut: "⌘I", instruction: "Open this window.")
+                ButtonInstructionView(buttonName: "Update", shortcut: "⌘U", instruction: "Update input sources and preserve shortcuts if you add or remove input sources.")
+                ButtonInstructionView(buttonName: "Reset", shortcut: "⌘R", instruction: "Reset input sources and shortcuts. Use it when you change system language.")
+                ButtonInstructionView(buttonName: "Quit", shortcut: "⌘Q", instruction: "Quit the app.")
             } // TODO: macOS 12 will support markdown format.
 
             Divider()
@@ -54,5 +54,20 @@ struct AboutView: View {
             }
         }
         .padding()
+    }
+}
+
+struct ButtonInstructionView: View {
+    var buttonName: String = ""
+    var shortcut: String = ""
+    var instruction: String = ""
+
+    var body: some View {
+        HStack {
+            Text("\(buttonName) \(shortcut)")
+                .fontWeight(.bold)
+            Text("-")
+            Text(instruction)
+        }
     }
 }

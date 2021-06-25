@@ -10,6 +10,7 @@ struct InputSources {
     init() {
         if UserDefaults.isFirstLaunch() {
             LoadNewInputSourcesFromSystem()
+            // FIXME: If you don't give `Accessiblity` to this app in `System Preferences -> Security` before you open this app for the first time, then no input source will appear. User can `Reset` to solve that problem.
         } else {
             // when the app restart, use Update() to clear unwanted global shortcuts
             Update()

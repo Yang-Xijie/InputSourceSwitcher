@@ -4,7 +4,9 @@ import SwiftUI
 // [ContentView]
 struct ContentView: View {
     @ObservedObject var MyInputSources = InputSourcesModel()
-    @State var isShowingAbout: Bool = true
+
+    // Show About if user open the app for the first time or update the app.
+    @State var isShowingAbout: Bool = UserDefaults.isFirstLaunchOfNewVersion() ? true : false
 
     var body: some View {
         VStack {

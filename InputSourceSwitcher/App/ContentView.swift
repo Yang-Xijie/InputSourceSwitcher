@@ -3,15 +3,24 @@ import SwiftUI
 
 // [ContentView]
 struct ContentView: View {
-    @ObservedObject var MyInputSources: InputSourcesModel = InputSourcesModel()
+    @ObservedObject var MyInputSources = InputSourcesModel()
+    @State var isShowingAbout: Bool = true
 
     var body: some View {
         VStack {
-            TopOptionView(MyInputSources: MyInputSources)
+            VStack {
+                TopOptionView(MyInputSources: MyInputSources, isShowingAbout: $isShowingAbout)
 
-            Divider()
+                Divider()
 
-            SwitcherView(MyInputSources: MyInputSources)
+                SwitcherView(MyInputSources: MyInputSources)
+            }
+            .frame(minHeight: 250)
+            // FIXME: The `.frame()` modifier is not really intelligent... and the size of popover is not adjustable... I write it to fixed with 5 input sources and I'm not so sure that it works great with all resolutions.
+
+            if isShowingAbout {
+                AboutView()
+            }
         }
         .padding()
     }
@@ -19,31 +28,38 @@ struct ContentView: View {
 
 struct TopOptionView: View {
     @ObservedObject var MyInputSources: InputSourcesModel
+    @Binding var isShowingAbout: Bool
+
     @Environment(\.openURL) var openURL
 
     var body: some View {
         HStack {
-            Button("About") {
+            Button(isShowingAbout ? "Hide About" : "About") {
                 print(Time() + "[Button] About clicked")
-                // link to open `AboutView` window
-                // `Target -> Info -> URL Types -> URL Schemes`://Viewer
-                if let url = URL(string: "SourceSwitcherAbout://Viewer") {
-                    openURL(url)
-                }
+
+                isShowingAbout.toggle()
             }
             .padding(.trailing)
             .keyboardShortcut("i", modifiers: .command)
 
             Button("Update") {
                 print(Time() + "[Button] Update clicked")
-                MyInputSources.Update() // get new InputSources from system and save KeyboardShortcuts at the same time
+
+                // get new InputSources from system and save KeyboardShortcuts at the same time
+                withAnimation {
+                    MyInputSources.Update()
+                }
             }
 
             .keyboardShortcut("u", modifiers: .command)
 
             Button("Reset") {
                 print(Time() + "[Button] Reset clicked")
-                MyInputSources.Reset() // reset KeyboardShortcuts and InputSources
+
+                // reset KeyboardShortcuts and InputSources
+                withAnimation {
+                    MyInputSources.Reset()
+                }
             }
 
             .keyboardShortcut("r", modifiers: .command)
@@ -52,8 +68,10 @@ struct TopOptionView: View {
                 print(Time() + "[Button] Quit clicked")
                 NSApplication.shared.terminate(self) // quit app == cmd Q
             }
+            .keyboardShortcut("q", modifiers: .command)
             .padding(.leading)
         }
+        .padding()
     }
 }
 

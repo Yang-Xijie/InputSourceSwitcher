@@ -10,46 +10,8 @@ struct SourceSwitcherApp: App {
 
     var body: some Scene {
         // [another window]
-        WindowGroup("SourceSwitcherAbout") {
-            AboutView()
-        }
-        // add link to AboutView
-        .handlesExternalEvents(matching: Set(arrayLiteral: "SourceSwitcherAbout")) // String including part of `URL Schemes`
-        // manage menu bar commands
-        .commands {
-            // [clear macOS default items]
-            CommandGroup(replacing: .undoRedo) {} // Undo Redo
-            CommandGroup(replacing: .newItem) {} // New Window
-            CommandGroup(replacing: .help) {} // Help
-
-            // [customized items]
-            CommandGroup(replacing: .pasteboard) { // Cut Copy Paste...
-                // [Edit -> Reset]
-                Button("Reset") {
-                    print(Time() + "[Menu Bar] Edit -> Reset")
-
-                    appDelegate.MyInputSources.Reset()
-                }.keyboardShortcut("r", modifiers: .command)
-
-                // [Edit -> Update]
-                Button("Update") {
-                    print(Time() + "[Menu Bar] Edit -> Update")
-
-                    appDelegate.MyInputSources.Update()
-                }.keyboardShortcut("u", modifiers: .command)
-            }
-
-            // replace system menu bar `About` to my `AboutView`
-            CommandGroup(after: .appInfo) { // About
-                Button("About") {
-                    print(Time() + "[Menu Bar] App -> About")
-
-                    // `Xcode -> Target -> Info -> URL Types -> URL Schemes`://Viewer
-                    if let url = URL(string: "SourceSwitcherAbout://Viewer") {
-                        openURL(url)
-                    }
-                }.keyboardShortcut("i", modifiers: .command)
-            }
+        Settings {
+            EmptyView()
         }
     }
 }

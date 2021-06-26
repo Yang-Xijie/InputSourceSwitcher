@@ -4,17 +4,20 @@ struct AboutView: View {
     @Environment(\.openURL) var openURL
 
     var body: some View {
+        // TODO: macOS 12 will support markdown format.
+
         VStack(alignment: .leading) {
-            Text("A menu bar App to **switch input sources** swiftly by shortcuts on `macOS 11 Big Sur or later`.")
+            Text("A menu bar app to switch input sources")
+            Text("swiftly by shortcuts on macOS 11 Big Sur or later.")
 
             Divider()
 
             VStack(alignment: .leading) {
-                ButtonInstructionView(buttonName: "About", shortcut: "⌘I", instruction: "Open this window.")
-                ButtonInstructionView(buttonName: "Update", shortcut: "⌘U", instruction: "Update input sources and preserve shortcuts if you add or remove input sources.")
-                ButtonInstructionView(buttonName: "Reset", shortcut: "⌘R", instruction: "Reset input sources and shortcuts. Use it when you change system language.")
-                ButtonInstructionView(buttonName: "Quit", shortcut: "⌘Q", instruction: "Quit the app.")
-            } // TODO: macOS 12 will support markdown format.
+                SingleLineInstructionView(name: "About", shortcut: "⌘I", instruction: "Open this window.")
+                SingleLineInstructionView(name: "Update", shortcut: "⌘U", instruction: "Update input sources and preserve shortcuts.")
+                SingleLineInstructionView(name: "Reset", shortcut: "⌘R", instruction: "Reset input sources and shortcuts.")
+                SingleLineInstructionView(name: "Quit", shortcut: "⌘Q", instruction: "Quit the app.")
+            }
 
             Divider()
 
@@ -30,7 +33,7 @@ struct AboutView: View {
                     Button("Support") {
                         openURL(URL(string: "https://yang-xijie.github.io/postscript/support.html")!)
                     }
-                    Text("WeChat Pay / Alipay")
+//                    Text("WeChat Pay / Alipay")
                 }
             }
 
@@ -54,19 +57,20 @@ struct AboutView: View {
             }
         }
         .padding()
+        .frame(minHeight: 350)
     }
 }
 
-struct ButtonInstructionView: View {
-    var buttonName: String = ""
+struct SingleLineInstructionView: View {
+    var name: String = ""
     var shortcut: String = ""
     var instruction: String = ""
 
     var body: some View {
-        HStack {
-            Text("\(buttonName) \(shortcut)")
+        VStack(alignment: .leading) {
+            Text("\(name) \(shortcut)")
                 .fontWeight(.bold)
-            Text("-")
+
             Text(instruction)
         }
     }

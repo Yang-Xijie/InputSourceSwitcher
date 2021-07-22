@@ -9,7 +9,9 @@ struct ContentView: View {
     @State var isShowingAbout: Bool = UserDefaults.isFirstLaunchOfNewVersion() ? true : false
 
     var body: some View {
-        VStack {
+        let frameHeight: CGFloat = CGFloat(100) + CGFloat(MyInputSources.inputSources.count * 30) // This formula is revived from experiments on MacBook Pro 13', whose display is scaled at 1680 * 1050.
+
+        VStack(alignment: .center) {
             VStack {
                 TopOptionView(MyInputSources: MyInputSources, isShowingAbout: $isShowingAbout)
 
@@ -17,8 +19,7 @@ struct ContentView: View {
 
                 SwitcherView(MyInputSources: MyInputSources)
             }
-            .frame(minHeight: 250)
-            // FIXME: The `.frame()` modifier is not really intelligent... and the size of popover is not adjustable... I write it to fixed with 5 input sources and I'm not so sure that it works great with all resolutions.
+            .frame(minHeight: frameHeight)
 
             if isShowingAbout {
                 AboutView()

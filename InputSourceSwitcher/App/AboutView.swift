@@ -2,6 +2,8 @@ import SwiftUI
 
 struct AboutView: View {
     @Environment(\.openURL) var openURL
+    let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
 
     var body: some View {
         // TODO: macOS 12 will support markdown format.
@@ -9,6 +11,7 @@ struct AboutView: View {
         VStack(alignment: .leading) {
             Text("A menu bar app to switch input sources")
             Text("swiftly by shortcuts on macOS 11 Big Sur or later.")
+            Text("Version \(appVersionString) (\(buildNumber))")
 
             Divider()
 
@@ -40,7 +43,7 @@ struct AboutView: View {
             Divider()
 
             // Open Source Project
-            Text("Used Open Source Project")
+            Text("Referenced open source projects:")
             VStack(alignment: .leading) {
                 HStack {
                     Link("KeyboardShortcuts",

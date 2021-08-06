@@ -22,6 +22,8 @@ struct ContentView: View {
             .frame(minHeight: frameHeight)
 
             if isShowingAbout {
+                Divider()
+
                 AboutView()
             }
         }
@@ -40,7 +42,7 @@ struct TopOptionView: View {
             Button(isShowingAbout ? "Hide About" : "About") {
                 print(Time() + "[Button] About clicked")
 
-                isShowingAbout.toggle()
+                isShowingAbout.toggle() // TODO: add animation
             }
             .padding(.trailing)
             .keyboardShortcut("i", modifiers: .command)

@@ -1,80 +1,118 @@
 import SwiftUI
 
+let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+
 struct AboutView: View {
-    @Environment(\.openURL) var openURL
-    let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-    let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+    static let height: CGFloat = CGFloat(390)
 
     var body: some View {
-        // TODO: macOS 12 will support markdown format.
-
         VStack(alignment: .leading) {
-            Text("A menu bar app to switch input sources")
-            Text("swiftly by shortcuts on macOS 11 Big Sur or later.")
-            Text("Version \(appVersionString) (\(buildNumber))")
+            IntroductionView()
 
             Divider()
 
+            InstructionsView()
+
+            Divider()
+
+            ExternalLinksView()
+
+            Divider()
+
+            ReferecedOpenSourceProjectsView()
+        }
+        .padding()
+        .frame(minHeight: AboutView.height)
+    }
+
+    struct IntroductionView: View {
+        var body: some View {
+            VStack(alignment: .leading) {
+                Text("A menu bar app to switch input sources")
+                Text("swiftly using shortcuts on")
+                Text("macOS 11 Big Sur or later.")
+                // TODO: macOS 12 will support markdown format.
+            }
+        }
+    }
+
+    struct InstructionsView: View {
+        var body: some View {
             VStack(alignment: .leading) {
                 SingleLineInstructionView(name: "About", shortcut: "⌘I", instruction: "Open this window.")
                 SingleLineInstructionView(name: "Update", shortcut: "⌘U", instruction: "Update input sources and preserve shortcuts.")
                 SingleLineInstructionView(name: "Reset", shortcut: "⌘R", instruction: "Reset input sources and shortcuts.")
                 SingleLineInstructionView(name: "Quit", shortcut: "⌘Q", instruction: "Quit the app.")
             }
+        }
 
-            Divider()
+        struct SingleLineInstructionView: View {
+            var name: String = ""
+            var shortcut: String = ""
+            var instruction: String = ""
 
+            var body: some View {
+                VStack(alignment: .leading) {
+                    Text("\(name) \(shortcut)")
+                        .fontWeight(.bold)
+
+                    Text(instruction)
+                }
+            }
+        }
+    }
+
+    struct ExternalLinksView: View {
+        @Environment(\.openURL) var openURL
+        var body: some View {
             VStack(alignment: .leading) {
+                Text("Version \(appVersionString) (\(buildNumber))")
+
                 Button("View it on GitHub") {
                     openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher")!)
                 }
+
                 Button("Report a bug") {
                     openURL(URL(string: "https://github.com/Yang-Xijie/InputSourceSwitcher/issues")!)
                 }
 
-                HStack {
-                    Button("Support") {
-                        openURL(URL(string: "https://yang-xijie.github.io/postscript/support.html")!)
-                    }
-//                    Text("WeChat Pay / Alipay")
-                }
-            }
-
-            Divider()
-
-            // Open Source Project
-            Text("Referenced open source projects:")
-            VStack(alignment: .leading) {
-                HStack {
-                    Link("KeyboardShortcuts",
-                         destination: URL(string: "https://github.com/sindresorhus/KeyboardShortcuts")!)
-                    Link("LICENSE",
-                         destination: URL(string: "https://github.com/sindresorhus/KeyboardShortcuts/blob/main/license")!)
-                }
-                HStack {
-                    Link("menubarpopoverswiftui2",
-                         destination: URL(string: "https://github.com/zaferarican/menubarpopoverswiftui2")!)
-                    Link("LICENSE",
-                         destination: URL(string: "https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE")!)
+                Button("Support") {
+                    openURL(URL(string: "https://yang-xijie.github.io/postscript/support.html")!)
                 }
             }
         }
-        .padding()
-        .frame(minHeight: 350)
     }
-}
 
-struct SingleLineInstructionView: View {
-    var name: String = ""
-    var shortcut: String = ""
-    var instruction: String = ""
+    struct ReferecedOpenSourceProjectsView: View {
+        var body: some View {
+            VStack(alignment: .leading) {
+                Text("Referenced open source projects")
 
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(name) \(shortcut)")
-                .fontWeight(.bold)
+                OpenSourceProjectView(
+                    projectName: "KeyboardShortcuts",
+                    repositoryURL: "https://github.com/sindresorhus/KeyboardShortcuts",
+                    licenseURL: "https://github.com/sindresorhus/KeyboardShortcuts/blob/main/license")
+                OpenSourceProjectView(
+                    projectName: "menubarpopoverswiftui2",
+                    repositoryURL: "https://github.com/zaferarican/menubarpopoverswiftui2",
+                    licenseURL: "https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE")
+            }
+        }
 
-            Text(instruction)
+        struct OpenSourceProjectView: View {
+            var projectName: String = ""
+            var repositoryURL: String = ""
+            var licenseURL: String = ""
+
+            var body: some View {
+                HStack {
+                    Link(projectName,
+                         destination: URL(string: repositoryURL)!)
+                    Link("LICENSE",
+                         destination: URL(string: licenseURL)!)
+                }
+            }
         }
     }
 }

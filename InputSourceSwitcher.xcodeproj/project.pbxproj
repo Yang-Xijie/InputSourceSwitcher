@@ -54,13 +54,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48462E312681F9AD006DB779 /* Docs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Docs;
-			sourceTree = "<group>";
-		};
 		48462E352682193C006DB779 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +117,6 @@
 				48462E352682193C006DB779 /* App */,
 				4880B53B26838FD700D53186 /* Applescript */,
 				4858851A268398F7000D36BF /* Other */,
-				48462E312681F9AD006DB779 /* Docs */,
 				4858851926839730000D36BF /* macOS */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA104D2681781700A3D537 /* Preview Content */,

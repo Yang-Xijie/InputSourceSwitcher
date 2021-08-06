@@ -2,6 +2,8 @@
 
 A **menu bar app** to **change input sources** swiftly using **shortcuts** on *macOS Big Sur and later*.
 
+View [screenshots](https://github.com/Yang-Xijie/InputSourceSwitcher/discussions/11)
+
 ## Introduction
 
 This app uses `Applescript` to manipulate `UI operation` which is better than using `Carbon` (a framework most of whose APIs are deprecated) in other tools to change input sources.
@@ -30,10 +32,9 @@ So one way is what [hatashiro / kawa](https://github.com/hatashiro/kawa) uses, w
 
 **Innovatively, I use a completely _UI_ way to solve all these problems.** Referring to [Geoff Taylor | Scripting the menu bar in macOS Big Sur](https://www.geofftaylor.me/2020/scripting-the-menu-bar-in-macos-big-sur/), I use [UI Browser](https://pfiddlesoft.com/uibrowser/index.html) to find how to use Applesript to express the Input Source Panel in the menu bar (Control Center). Then refer to [Chris J. | How to launch an AppleScript from AppKit on Catalina with Swift](https://medium.com/macoclock/everything-you-need-to-do-to-launch-an-applescript-from-appkit-on-macos-catalina-with-swift-1ba82537f7c3) to use Applescript in macOS app (*which has a drawback that sandbox is disabled*). After getting the prototype, I design the UI of this app, make this app a menu bar app, add shortcuts to it and better its code logic to avoid some potential bugs.
 
-## Used Open Source Projects
+## Referenced Open Source Projects
 
 [menubarpopoverswiftui2](https://github.com/zaferarican/menubarpopoverswiftui2) - [LICENSE](https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE)
-
 
 [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) - [LICENSE](https://github.com/sindresorhus/KeyboardShortcuts/blob/main/license)
 

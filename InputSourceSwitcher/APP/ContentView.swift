@@ -40,15 +40,15 @@ struct TopOptionView: View {
     var body: some View {
         HStack {
             Button(isShowingAbout ? "Hide About" : "About") {
-                print(Time() + "[Button] About clicked")
+                print("[Button] About clicked")
 
-                isShowingAbout.toggle() // TODO: add animation
+                isShowingAbout.toggle() // TODO: add animation (withAnimation not really works)
             }
             .padding(.trailing)
             .keyboardShortcut("i", modifiers: .command)
 
             Button("Update") {
-                print(Time() + "[Button] Update clicked")
+                print("[Button] Update clicked")
 
                 // get new InputSources from system and save KeyboardShortcuts at the same time
                 withAnimation {
@@ -59,7 +59,7 @@ struct TopOptionView: View {
             .keyboardShortcut("u", modifiers: .command)
 
             Button("Reset") {
-                print(Time() + "[Button] Reset clicked")
+                print("[Button] Reset clicked")
 
                 // reset KeyboardShortcuts and InputSources
                 withAnimation {
@@ -70,7 +70,7 @@ struct TopOptionView: View {
             .keyboardShortcut("r", modifiers: .command)
 
             Button("Quit") {
-                print(Time() + "[Button] Quit clicked")
+                print("[Button] Quit clicked")
                 NSApplication.shared.terminate(self) // quit app == cmd Q
             }
             .keyboardShortcut("q", modifiers: .command)
@@ -89,7 +89,7 @@ struct SwitcherView: View {
             ForEach(MyInputSources.inputSources) { inputSource in
                 HStack {
                     Button("Switch to \(inputSource.name)") {
-                        print(Time() + "[Button] Switch to \(inputSource.name) Clicked")
+                        print("[Button] Switch to \(inputSource.name) Clicked")
 
                         MyInputSources.SwitchInputSource(to: inputSource.name)
                     }
@@ -97,7 +97,7 @@ struct SwitcherView: View {
                     KeyboardShortcuts.Recorder(for: KeyboardShortcuts.Name(inputSource.name))
                         .onAppear {
                             KeyboardShortcuts.onKeyDown(for: KeyboardShortcuts.Name(inputSource.name)) {
-                                print(Time() + "[KeyboardShortcuts] shortcut of \(inputSource.name) down")
+                                print("[KeyboardShortcuts] shortcut of \(inputSource.name) down")
 
                                 MyInputSources.SwitchInputSource(to: inputSource.name)
                             }

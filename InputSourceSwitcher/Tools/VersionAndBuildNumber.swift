@@ -1,5 +1,8 @@
 import Foundation
 
+let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+
 extension UserDefaults {
     // 应用第一次启动 app starts for the first time
     static func isFirstLaunch() -> Bool {

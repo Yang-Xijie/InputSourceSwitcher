@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4831FBE02683B46900D6C6F8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831FBDF2683B46900D6C6F8 /* Log.swift */; };
+		4831FBE02683B46900D6C6F8 /* Pirnt+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831FBDF2683B46900D6C6F8 /* Pirnt+.swift */; };
 		48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E262681EC18006DB779 /* InputSourceModel.swift */; };
 		48462E292681F296006DB779 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48462E282681F296006DB779 /* InputSource.swift */; };
 		48462E2E2681F871006DB779 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48462E2D2681F871006DB779 /* KeyboardShortcuts */; };
 		4880B5372683819300D53186 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B5362683819300D53186 /* Shortcuts.swift */; };
 		4880B53A26838FC800D53186 /* Applesripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B53926838FC800D53186 /* Applesripts.swift */; };
-		48860FC826845485002A5487 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48860FC726845485002A5487 /* UserDefaults+.swift */; };
+		48860FC826845485002A5487 /* VersionAndBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48860FC726845485002A5487 /* VersionAndBuildNumber.swift */; };
 		48CE6B692682611D00B1A186 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6B682682611D00B1A186 /* AboutView.swift */; };
 		48DA10482681781500A3D537 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* App.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
@@ -24,12 +24,12 @@
 
 /* Begin PBXFileReference section */
 		4831FBDE2683AA0700D6C6F8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		4831FBDF2683B46900D6C6F8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4831FBDF2683B46900D6C6F8 /* Pirnt+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pirnt+.swift"; sourceTree = "<group>"; };
 		48462E262681EC18006DB779 /* InputSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceModel.swift; sourceTree = "<group>"; };
 		48462E282681F296006DB779 /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		4880B53926838FC800D53186 /* Applesripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applesripts.swift; sourceTree = "<group>"; };
-		48860FC726845485002A5487 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		48860FC726845485002A5487 /* VersionAndBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionAndBuildNumber.swift; sourceTree = "<group>"; };
 		48CE6B682682611D00B1A186 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* Source Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Source Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -54,14 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48462E352682193C006DB779 /* App */ = {
+		48462E352682193C006DB779 /* APP */ = {
 			isa = PBXGroup;
 			children = (
 				48DA10472681781500A3D537 /* App.swift */,
 				48DA10492681781500A3D537 /* ContentView.swift */,
 				48CE6B682682611D00B1A186 /* AboutView.swift */,
 			);
-			path = App;
+			path = APP;
 			sourceTree = "<group>";
 		};
 		4858851926839730000D36BF /* macOS */ = {
@@ -73,22 +73,29 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		4858851A268398F7000D36BF /* Other */ = {
+		4858851A268398F7000D36BF /* Auxiliary */ = {
 			isa = PBXGroup;
 			children = (
-				4880B5362683819300D53186 /* Shortcuts.swift */,
-				4831FBDF2683B46900D6C6F8 /* Log.swift */,
-				48860FC726845485002A5487 /* UserDefaults+.swift */,
+				4831FBDF2683B46900D6C6F8 /* Pirnt+.swift */,
 			);
-			path = Other;
+			path = Auxiliary;
 			sourceTree = "<group>";
 		};
-		4880B53B26838FD700D53186 /* Applescript */ = {
+		4880B53B26838FD700D53186 /* Applescripts */ = {
 			isa = PBXGroup;
 			children = (
 				4880B53926838FC800D53186 /* Applesripts.swift */,
 			);
-			path = Applescript;
+			path = Applescripts;
+			sourceTree = "<group>";
+		};
+		489B885226BD2D200090DC8D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				48860FC726845485002A5487 /* VersionAndBuildNumber.swift */,
+				4880B5362683819300D53186 /* Shortcuts.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		48DA103B2681781500A3D537 = {
@@ -112,11 +119,12 @@
 		48DA10462681781500A3D537 /* InputSourceSwitcher */ = {
 			isa = PBXGroup;
 			children = (
-				48DA10612681B27500A3D537 /* DataStructure */,
+				48DA10612681B27500A3D537 /* DataStructures */,
 				48DA10642681B66100A3D537 /* ViewModel */,
-				48462E352682193C006DB779 /* App */,
-				4880B53B26838FD700D53186 /* Applescript */,
-				4858851A268398F7000D36BF /* Other */,
+				48462E352682193C006DB779 /* APP */,
+				4880B53B26838FD700D53186 /* Applescripts */,
+				489B885226BD2D200090DC8D /* Tools */,
+				4858851A268398F7000D36BF /* Auxiliary */,
 				4858851926839730000D36BF /* macOS */,
 				48DA104B2681781700A3D537 /* Assets.xcassets */,
 				48DA104D2681781700A3D537 /* Preview Content */,
@@ -132,13 +140,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		48DA10612681B27500A3D537 /* DataStructure */ = {
+		48DA10612681B27500A3D537 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
 				48462E282681F296006DB779 /* InputSource.swift */,
 				48DA105F2681B26E00A3D537 /* InputSources.swift */,
 			);
-			path = DataStructure;
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 		48DA10642681B66100A3D537 /* ViewModel */ = {
@@ -226,8 +234,8 @@
 			files = (
 				48462E292681F296006DB779 /* InputSource.swift in Sources */,
 				48DA10602681B26E00A3D537 /* InputSources.swift in Sources */,
-				48860FC826845485002A5487 /* UserDefaults+.swift in Sources */,
-				4831FBE02683B46900D6C6F8 /* Log.swift in Sources */,
+				48860FC826845485002A5487 /* VersionAndBuildNumber.swift in Sources */,
+				4831FBE02683B46900D6C6F8 /* Pirnt+.swift in Sources */,
 				48DA104A2681781500A3D537 /* ContentView.swift in Sources */,
 				4880B53A26838FC800D53186 /* Applesripts.swift in Sources */,
 				4880B5372683819300D53186 /* Shortcuts.swift in Sources */,

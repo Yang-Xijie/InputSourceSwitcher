@@ -1,10 +1,7 @@
 import SwiftUI
 
-let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-
 struct AboutView: View {
-    static let height: CGFloat = CGFloat(390)
+    static let height = CGFloat(390)
 
     var body: some View {
         VStack(alignment: .leading) {

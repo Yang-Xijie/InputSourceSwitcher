@@ -74,14 +74,14 @@ struct InputSources {
 
         let inputSourcesToResetShortcut: Set<String> = Set(original).subtracting(Set(new))
 
-//        print(Time() + "[Model Debug]\n\toriginalInputSources:\(originalInputSources)\n\tnewInputSources:\(newInputSources)\n\tinputSourcesToResetShortcut:\(inputSourcesToResetShortcut)")
+//        print("[Model Debug]\n\toriginalInputSources:\(originalInputSources)\n\tnewInputSources:\(newInputSources)\n\tinputSourcesToResetShortcut:\(inputSourcesToResetShortcut)")
 
         // Then, use their names to reset their shortcuts
 
         if inputSourcesToResetShortcut != Set<String>() {
             for inputSource in inputSourcesToResetShortcut {
                 KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource))
-                print(Time() + "[KeyboardShortcuts] reset \(inputSource)")
+                print("[KeyboardShortcuts] reset \(inputSource)")
             }
         }
 
@@ -93,7 +93,7 @@ struct InputSources {
     mutating func Reset() {
         for inputSource in inputSources {
             KeyboardShortcuts.reset(KeyboardShortcuts.Name(inputSource.name))
-            print(Time() + "[KeyboardShortcuts] reset \(inputSource.name)")
+            print("[KeyboardShortcuts] reset \(inputSource.name)")
         }
 
         LoadNewInputSourcesFromSystem()

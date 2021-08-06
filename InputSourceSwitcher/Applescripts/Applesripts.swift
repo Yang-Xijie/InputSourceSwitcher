@@ -14,20 +14,20 @@ func UseApplescriptToGetSystemInputSourcesInMenubar() -> [InputSource] {
         let descriptor = script.executeAndReturnError(&error)
         /// descriptor: <NSAppleEventDescriptor: [ 'utxt'("Pinyin - Simplified"), 'utxt'("ABC"), 'utxt'("Hiragana"), 'msng', 'utxt'("Handwriting - Simplified"), 'msng', 'utxt'("Show Emoji & Symbols"), 'utxt'("Show Keyboard Viewer"), 'msng', 'utxt'("Show Input Source Name"), 'msng', 'utxt'("Open Keyboard Preferences…") ]>
         if let err = error {
-            print(Time() + "[Applescript] NSAppleScript.executeAndReturnError(): \(err)")
+            print("[Applescript] NSAppleScript.executeAndReturnError(): \(err)")
         } else {
             var currentInputSources: [InputSource] = []
             for i in 1 ... descriptor.numberOfItems {
                 if let inputSource = descriptor.atIndex(i)?.stringValue {
                     currentInputSources.append(InputSource(name: inputSource, id: i))
                 } else {
-                    print(Time() + "[Applescript] Got \(currentInputSources.count) input sources from menu bar.")
+                    print("[Applescript] Got \(currentInputSources.count) input sources from menu bar.")
                     return currentInputSources
                 }
             }
         }
     } else {
-        print(Time() + "[Applescript] NSAppleScript.init()")
+        print("[Applescript] NSAppleScript.init()")
     }
     return []
 }
@@ -46,9 +46,9 @@ func UseApplescriptToSwitchInputSource(to inputSourceName: String) {
         var error: NSDictionary?
         script.executeAndReturnError(&error)
         if let err = error {
-            print(Time() + "[Applescript] NSAppleScript.executeAndReturnError(): \(err)")
+            print("[Applescript] NSAppleScript.executeAndReturnError(): \(err)")
         }
     } else {
-        print(Time() + "[Applescript] NSAppleScript.init()")
+        print("[Applescript] NSAppleScript.init()")
     }
 }

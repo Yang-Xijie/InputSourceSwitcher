@@ -7,7 +7,7 @@ class InputSourcesModel: ObservableObject {
     @Published private var model: InputSources = InputSourcesModel.createMyInputSources()
 
     private static func createMyInputSources() -> InputSources {
-        print(Time() + "[Model] createMyInputSources()")
+        print("[Model] createMyInputSources()")
 
         return InputSources()
     }
@@ -24,19 +24,19 @@ class InputSourcesModel: ObservableObject {
     func Reset() {
         model.Reset()
 
-        print(Time() + "[Model] Reset()")
+        print("[Model] Reset()")
     }
 
     /// `Update`: **re-get** Input Sources from system and **preserve**  shortcut settings at the same time.
     func Update() {
         model.Update()
 
-        print(Time() + "[Model] Update()")
+        print("[Model] Update()")
     }
 
     func SwitchInputSource(to inputSourceName: String) {
         model.SwitchInputSource(to: inputSourceName)
 
-        print(Time() + "[Model] Switch to InputSource\(inputSourceName)")
+        print("[Model] Switch to InputSource\(inputSourceName)")
     }
 }

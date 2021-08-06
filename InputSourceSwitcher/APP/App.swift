@@ -35,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController?.view = NSHostingView(
             rootView: ContentView(MyInputSources: MyInputSources))
         popover.contentViewController?.view.window?.makeKey()
+
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusBarItem?.button?.image = NSImage(
             systemSymbolName: "keyboard",
@@ -42,17 +43,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             .withSymbolConfiguration(NSImage.SymbolConfiguration(textStyle: .body, scale: .large))
         statusBarItem?.button?.action = #selector(AppDelegate.togglePopover(_:))
 
-        // When starting the app, open show the popover. If not do like this,  open the app and shortcuts will not work.
+        // When starting the app, show the popover. If don't do like this, open the app and shortcuts will not work.
         print(popover.isShown) // false
         // FIXME: It's a tricky workaround. I tried lots of methods, but the window not appears when start...
         if let button = statusBarItem?.button {
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            popover.show(
+                relativeTo: button.bounds,
+                of: button, preferredEdge: NSRectEdge.minY)
         }
-        print(popover.isShown) // true (but soon it changes to false)
+        print(popover.isShown) // true (but the popover not appear actually)
     }
 
     @objc func showPopover(_ sender: AnyObject?) {

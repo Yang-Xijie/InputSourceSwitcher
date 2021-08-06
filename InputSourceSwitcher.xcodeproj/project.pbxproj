@@ -14,6 +14,7 @@
 		4880B5372683819300D53186 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B5362683819300D53186 /* Shortcuts.swift */; };
 		4880B53A26838FC800D53186 /* Applesripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880B53926838FC800D53186 /* Applesripts.swift */; };
 		48860FC826845485002A5487 /* VersionAndBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48860FC726845485002A5487 /* VersionAndBuildNumber.swift */; };
+		489B885426BD2EE20090DC8D /* Notificatioins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B885326BD2EE20090DC8D /* Notificatioins.swift */; };
 		48CE6B692682611D00B1A186 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6B682682611D00B1A186 /* AboutView.swift */; };
 		48DA10482681781500A3D537 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10472681781500A3D537 /* App.swift */; };
 		48DA104A2681781500A3D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA10492681781500A3D537 /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		4880B5362683819300D53186 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
 		4880B53926838FC800D53186 /* Applesripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applesripts.swift; sourceTree = "<group>"; };
 		48860FC726845485002A5487 /* VersionAndBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionAndBuildNumber.swift; sourceTree = "<group>"; };
+		489B885326BD2EE20090DC8D /* Notificatioins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificatioins.swift; sourceTree = "<group>"; };
 		48CE6B682682611D00B1A186 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		48DA10442681781500A3D537 /* Source Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Source Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DA10472681781500A3D537 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				48860FC726845485002A5487 /* VersionAndBuildNumber.swift */,
 				4880B5362683819300D53186 /* Shortcuts.swift */,
+				489B885326BD2EE20090DC8D /* Notificatioins.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				4880B5372683819300D53186 /* Shortcuts.swift in Sources */,
 				48462E272681EC18006DB779 /* InputSourceModel.swift in Sources */,
 				48CE6B692682611D00B1A186 /* AboutView.swift in Sources */,
+				489B885426BD2EE20090DC8D /* Notificatioins.swift in Sources */,
 				48DA10482681781500A3D537 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

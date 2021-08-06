@@ -1,4 +1,5 @@
 import SwiftUI
+import UserNotifications
 
 @main
 struct SourceSwitcherApp: App {
@@ -52,6 +53,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 of: button, preferredEdge: NSRectEdge.minY)
         }
         print(popover.isShown) // true (but the popover not appear actually)
+
+        RequestNotificationCenterAuthorization()
+    }
+
+    func RequestNotificationCenterAuthorization() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { _, error in
+            if let error = error {
+                print("[NotificationCenter.requestAuthorization] error - \(error)")
+            }
+        }
     }
 
     @objc func showPopover(_ sender: AnyObject?) {

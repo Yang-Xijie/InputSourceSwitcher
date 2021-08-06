@@ -44,9 +44,14 @@ func UseApplescriptToSwitchInputSource(to inputSourceName: String) {
 
     if let script = NSAppleScript(source: applesript) {
         var error: NSDictionary?
+
         script.executeAndReturnError(&error)
+
         if let err = error {
             print("[Applescript] NSAppleScript.executeAndReturnError(): \(err)")
+        } else {
+            // Successfully switched.
+            PushNotification_DidSwitchInputSource(to: inputSourceName)
         }
     } else {
         print("[Applescript] NSAppleScript.init()")

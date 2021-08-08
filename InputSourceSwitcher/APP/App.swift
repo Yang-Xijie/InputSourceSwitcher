@@ -44,16 +44,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             .withSymbolConfiguration(NSImage.SymbolConfiguration(textStyle: .body, scale: .large))
         statusBarItem?.button?.action = #selector(AppDelegate.togglePopover(_:))
 
-        // When starting the app, show the popover. If don't do like this, open the app and shortcuts will not work.
-        print(popover.isShown) // false
-        // FIXME: It's a tricky workaround. I tried lots of methods, but the window not appears when start...
-        if let button = statusBarItem?.button {
-            popover.show(
-                relativeTo: button.bounds,
-                of: button, preferredEdge: NSRectEdge.minY)
+        // When starting the app, show the popover.
+        // If don't do like this, open the app and shortcuts will not work until click the icon on the menu bar.
+        // FIXME: If the user hides the menu bar (System Preferences -> Dock & Menu Bar -> Dock & Menu Bar -> Automatically hide and show the menu bar -> checked), the popover will appear on the top left corner of the screen, instead of appearing below the menu bar icon.
+        if
+//          true // debug
+            UserDefaults.isFirstLaunch()
+        {
+            // first launch - show the window
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if let button = self.statusBarItem?.button {
+                    self.popover.show(
+                        relativeTo: button.bounds,
+                        of: button, preferredEdge: NSRectEdge.minY)
+                }
+            }
+        } else {
+            // second and after launch - activate the window to start `KeyboardShortcuts`, but not show the window
+            if let button = statusBarItem?.button {
+                popover.show(
+                    relativeTo: button.bounds,
+                    of: button, preferredEdge: NSRectEdge.minY)
+            }
         }
-        print(popover.isShown) // true (but the popover not appear actually)
 
+        // send notifications on macOS
         RequestNotificationCenterAuthorization()
     }
 

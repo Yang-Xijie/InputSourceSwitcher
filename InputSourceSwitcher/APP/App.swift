@@ -21,6 +21,8 @@ struct SourceSwitcherApp: App {
 // refer to: https://github.com/zaferarican/menubarpopoverswiftui2
 // LICENSE: https://github.com/zaferarican/menubarpopoverswiftui2/blob/master/LICENSE
 class AppDelegate: NSObject, NSApplicationDelegate {
+    @ObservedObject var MyInputSources = InputSourcesModel() // use @StateObject will induce some problems...
+
     var popover = NSPopover()
     var statusBarItem: NSStatusItem?
 
@@ -32,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // The view controller that manages the content of the popover.
         popover.contentViewController = NSViewController()
         popover.contentViewController?.view = NSHostingView(
-            rootView: ContentView())
+            rootView: ContentView(MyInputSources: MyInputSources))
         popover.contentViewController?.view.window?.makeKey()
 
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)

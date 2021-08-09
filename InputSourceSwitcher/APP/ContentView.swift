@@ -3,10 +3,10 @@ import SwiftUI
 
 // [ContentView]
 struct ContentView: View {
-    @StateObject private var MyInputSources = InputSourcesModel()
+    @ObservedObject var MyInputSources = InputSourcesModel()
 
     // Show About if user open the app for the first time or update the app.
-    @State private var isShowingAbout: Bool = UserDefaults.isFirstLaunchOfNewVersion() ? true : false
+    @State var isShowingAbout: Bool = UserDefaults.isFirstLaunchOfNewVersion() ? true : false
 
     var body: some View {
         let frameHeight: CGFloat = CGFloat(100) + CGFloat(MyInputSources.inputSources.count * 30) // This formula is revived from experiments on MacBook Pro 13', whose display is scaled at 1680 * 1050.

@@ -44,4 +44,4 @@ Discuss about this app in the `Discussion` part. Check current desired features 
 
 Any `issue` or `pull request` are welcome!
 
-If you find this tiny app improving your efficency, feel free to [buy me a cup of coffee](https://yang-xijie.github.io/postscript/support.html) using `WeChat Pay` or `Alipay`.
+If you find this tiny app improving your efficency, feel free to [buy me a cup of coffee](https://yang-xijie.github.io/SITE/postscript/support.html) using `WeChat Pay` or `Alipay`.

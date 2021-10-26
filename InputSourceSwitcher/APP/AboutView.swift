@@ -75,7 +75,7 @@ struct AboutView: View {
                 }
 
                 Button("Support") {
-                    openURL(URL(string: "https://yang-xijie.github.io/postscript/support.html")!)
+                    openURL(URL(string: "https://yang-xijie.github.io/SITE/postscript/support.html")!)
                 }
             }
         }

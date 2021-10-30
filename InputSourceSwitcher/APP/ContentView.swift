@@ -9,7 +9,7 @@ struct ContentView: View {
     @State var isShowingAbout: Bool = UserDefaults.isFirstLaunchOfNewVersion() ? true : false
 
     var body: some View {
-        let frameHeight: CGFloat = CGFloat(100) + CGFloat(MyInputSources.inputSources.count * 30) // This formula is revived from experiments on MacBook Pro 13', whose display is scaled at 1680 * 1050.
+        let frameHeight = CGFloat(100) + CGFloat(MyInputSources.inputSources.count * 30) // This formula is revived from experiments on MacBook Pro 13', whose display is scaled at 1680 * 1050.
 
         VStack(alignment: .center) {
             VStack {
@@ -27,6 +27,7 @@ struct ContentView: View {
                 AboutView()
             }
         }
+        .frame(minWidth: 400)
         .padding()
     }
 }
@@ -42,7 +43,9 @@ struct TopOptionView: View {
             Button(isShowingAbout ? "Hide About" : "About") {
                 print("[Button] About clicked")
 
-                isShowingAbout.toggle() // TODO: add animation (withAnimation not really works)
+                withAnimation {
+                    isShowingAbout.toggle()
+                }
             }
             .padding(.trailing)
             .keyboardShortcut("i", modifiers: .command)

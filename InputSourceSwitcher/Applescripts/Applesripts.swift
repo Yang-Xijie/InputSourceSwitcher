@@ -34,11 +34,19 @@ func UseApplescriptToGetSystemInputSourcesInMenubar() -> [InputSource] {
 
 func UseApplescriptToSwitchInputSource(to inputSourceName: String) {
     let applesript = """
-    tell application "System Events"
-        tell process "TextInputMenuAgent"
-            click menu item "\(inputSourceName)" of menu 1 of menu bar item 1 of menu bar 2
-            click menu bar item 1 of menu bar 2
+    ignoring application responses
+        tell application "System Events"
+            click menu bar item 1 of menu bar 2 of application process "TextInputMenuAgent" of application "System Events"
         end tell
+    end ignoring
+
+    delay 0.1
+    do shell script "killall 'System Events'"
+    delay 0.1
+
+    tell application "System Events"
+        launch
+        click menu item "\(inputSourceName)" of menu 1 of menu bar item 1 of menu bar 2 of application process "TextInputMenuAgent" of application "System Events"
     end tell
     """
 

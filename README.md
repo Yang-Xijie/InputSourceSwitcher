@@ -14,7 +14,12 @@ Download the release version and drop `Source Switcher.app`  into your `Applicat
 
 **Or** clone this repo and build it on your Mac.
 
-**Notice**: You should go to `System Preferences -> Security & Privacy -> Privacy -> Accessiblity` to make `Source Switcher` able to execute Applescript on your Mac. You'd better perform this operation before you open this app for the first time. If no input source appears, just lick `Reset` to get your current input sources.
+**Notice**: You should go to `System Preferences -> Security & Privacy -> Privacy -> Accessiblity` to make `Source Switcher` able to execute Applescript on your Mac.
+
+
+Then go to `System Preferences -> Security & Privacy -> Privacy -> Automation` to select `Source Switcher.app` and *Tick the box* of `System Envent.app`.
+
+You'd better perform this operation before you open this app for the first time. If no input source appears, just lick `Reset` to get your current input sources.
 
 **Notice**: If you get `Source Switcher.app can't be opened because Apple cannot check it for malicious software`, please open your `Applications` folder, find `Source Switcher.app` and `right click -> Open` to open the app. 
 

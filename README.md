@@ -1,3 +1,53 @@
+# NOTICE
+
+I have **stopped maintaining** this project because Applescript not works as before in `macOS 12`.
+
+## macOS 11, Big Sur
+
+On `macOS 11`, Applescript below **worked well** with little latency:
+
+```applescript
+tell application "System Events"
+    tell process "TextInputMenuAgent"
+        click menu item "\(inputSourceName)" of menu 1 of menu bar item 1 of menu bar 2
+        click menu bar item 1 of menu bar 2
+    end tell
+end tell
+```
+
+The corresponding release and commit are:
+
+https://github.com/Yang-Xijie/InputSourceSwitcher/releases/tag/v1.2
+
+d5f309e678f8e97d83da95e6facc5b4eada6b501
+
+## macOS 12, Monterey
+
+When macOS 12 came, I tried to update this project. However, it seems that `click` in Applescript not works as expected. I made several commits on Oct 30, 2021 using a new Applescript. However, I should say it just works sometimes, not always realiable.
+
+```applescript
+ignoring application responses
+    tell application "System Events"
+        click menu bar item 1 of menu bar 2 of application process "TextInputMenuAgent" of application "System Events"
+    end tell
+end ignoring
+    
+delay 0.1
+do shell script "killall 'System Events'"
+delay 0.1
+    
+tell application "System Events"
+    launch
+    click menu item "\(inputSourceName)" of menu 1 of menu bar item 1 of menu bar 2 of application process "TextInputMenuAgent" of application "System Events"
+end tell
+```
+
+Corresponding release and commit are:
+
+https://github.com/Yang-Xijie/InputSourceSwitcher/releases/tag/v1.3
+
+5f2b73d7c315f5900da1b76d04b8b3e9808d6716
+
 #  Source Switcher
 
 A **menu bar app** to **change input sources** swiftly using **shortcuts** on *macOS Big Sur and later*.
